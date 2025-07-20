@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+*{
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: "Against";
+    src: url("/public/against.ttf");
+}
+h1{
+    font-family: "Against";
+    
+}
+.heading{
+    color: darkgreen;
+    @apply md:text-5xl text-xl 
+     
+}
+
+.para{
+    @apply md:text-xl text-lg  
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;            
+}
