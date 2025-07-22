@@ -1,34 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bgImage from "../assets/bg.jpg";
 import bgImage2 from "../assets/bg2.jpg";
 import bench from "../assets/bench.png";
 import home from "../assets/home.jpg";
-import whiteLogo from '../assets/whiteLogo.png'
+import whiteLogo from "../assets/whiteLogo.png";
+import { motion, useScroll, useTransform } from "framer-motion";
+import img1 from "../assets/img1.jpg";
+import img2 from "../assets/img2.jpg";
+import img3 from "../assets/img3.jpg";
+import img4 from "../assets/img4.jpg";
+import TeamSection from "../components/TeamSection";
+
 const OurStory = () => {
+    const bgImages = [img1, img2, img3, img4];
+    const [current, setCurrent] = useState(0);
+    const { scrollY } = useScroll();
+    const y = useTransform(scrollY, [0, 800], [0, 1000]); // move down
+    const scale = useTransform(scrollY, [0, 700], [1, 2]); // scale up
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % bgImages.length);
+        }, 5000); // change every 5s
+
+        return () => clearInterval(interval);
+    }, []);
     return (
         <main className=" overflow-x-clip">
-            <section
-                className=" w-screen h-screen flex items-center justify-center"
-                style={{
-                    backgroundImage: `url(${bgImage})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                }}
-            >
-                <img src={whiteLogo} className=" h-3/5" alt="Aranyam" />
+            <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
+                {/* Background Layers */}
+                {bgImages.map((img, index) => (
+                    <div
+                        key={index}
+                        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+                            index === current
+                                ? "opacity-100 z-10"
+                                : "opacity-0 z-0"
+                        }`}
+                        style={{ backgroundImage: `url(${img})` }}
+                    ></div>
+                ))}
+
+                {/* Foreground Logo */}
+                <motion.img
+                    src={whiteLogo}
+                    alt="Aranyam"
+                    className="h-3/5 z-20"
+                    style={{
+                        y,
+                        scale,
+                    }}
+                />
             </section>
 
             <section className=" w-screen h-[240vh] relative">
                 <img
                     src={bgImage2}
                     className="absolute h-full -z-10 object-cover object-center opacity-15"
-                    
                 />
 
                 <div className=" h-screen w-screen flex items-center flex-col justify-center gap-8">
                     <h1 className=" text-8xl text-green-800 ">Our Story</h1>
-                    <h2 className=" text-4xl text-green-900">Not Built on the Land.</h2>
+                    <h2 className=" text-4xl text-green-900">
+                        Not Built on the Land.
+                    </h2>
                     <p className="  text-2xl w-1/2 text-center text-green-800">
                         Tucked into the slopes of Nathuakhan, Aranyam is a
                         homecoming born from childhood memories and reimagined
@@ -69,7 +103,7 @@ const OurStory = () => {
                 </div>
             </section>
 
-            <section className=" w-screen h-screen bg-green-700 flex flex-col items-center justify-center">
+            <section className=" w-screen h-screen bg-[#457f5e] flex flex-col items-center justify-center">
                 <h1 className="text-5xl text-white">What Build Us!</h1>
 
                 <div className=" w-full flex items-center justify-center mt-20">
@@ -148,6 +182,8 @@ const OurStory = () => {
                     </div>
                 </div>
             </section>
+
+            {/* <TeamSection /> */}
         </main>
     );
 };

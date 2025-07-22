@@ -10,8 +10,8 @@ function App() {
     <BrowserRouter>
       <SidePanel />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/ourstory" element={<OurStory />} />
+        <Route path="/" element={<OurStory />} />
+        <Route path="/explore" element={<LandingPage />} />
       </Routes>
     </BrowserRouter>
     </>

@@ -16,13 +16,13 @@ h1{
     
 }
 .heading{
-    color: darkgreen;
-    @apply md:text-5xl text-xl 
+    color: #457f5e ;
+    @apply md:text-4xl text-xl 
      
 }
 
 .para{
-    @apply md:text-xl text-lg  
+    @apply md:text-lg text-lg  
 }
 
 .scrollbar-hide::-webkit-scrollbar {

@@ -5,7 +5,7 @@ export default function Card({
   description, 
   image, 
   mode = 'center', 
-  bgColor = 'bg-green-800' 
+  bgColor = 'bg-[#457f5e]' 
 }) {
   const hasImage = mode === 'top' || mode === 'bottom';
 
@@ -16,21 +16,21 @@ export default function Card({
       )}
       
       {mode === 'center' && (
-        <div className={`absolute inset-0 p-10 flex flex-col justify-center ${bgColor} text-white`}>
+        <div className={`absolute inset-0 p-10 flex flex-col justify-center bg-[#457f5e] text-white`}>
           <h1 className="text-4xl font-bold mb-2">{title}</h1>
           <p className="md:text-2xl text-lg mt-10">{description}</p>
         </div>
       )}
 
       {mode === 'top' && (
-        <div className="absolute inset-0 p-10 bg-gradient-to-b from-35% from-green-800 to-transparent flex flex-col justify-start  text-white">
+        <div className="absolute inset-0 p-10 bg-gradient-to-b from-35% bg-[#457f5e] to-transparent flex flex-col justify-start  text-white">
           <h1 className="text-4xl font-bold">{title}</h1>
           <p className="md:text-2xl text-lg mt-10">{description}</p>
         </div>
       )}
 
       {mode === 'bottom' && (
-        <div className="absolute inset-0 p-10 bg-gradient-to-t from-35% from-green-800 to-transparent flex flex-col justify-end  text-white">
+        <div className="absolute inset-0 p-10 bg-gradient-to-t from-35% bg-[#457f5e] to-transparent flex flex-col justify-end  text-white">
           <h1 className="text-4xl font-bold">{title}</h1>
           <p className="md:text-2xl text-lg mt-10">{description}</p>
         </div>

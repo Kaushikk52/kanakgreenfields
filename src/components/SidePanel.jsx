@@ -41,8 +41,8 @@ export default function SidePanel() {
           <Link to="/" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-800 hover:text-black">
             Home
           </Link>
-          <Link to="/ourstory" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-800 hover:text-black">
-            Our Story
+          <Link to="/explore" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-800 hover:text-black">
+            Explore
           </Link>
         </nav>
       </div>

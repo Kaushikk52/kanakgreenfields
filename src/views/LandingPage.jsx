@@ -25,6 +25,7 @@ import flower from '../assets/experiences/flower.png'
 import forest from '../assets/experiences/forest.jpg'
 import hills from '../assets/experiences/hills.jpg'
 import orange from '../assets/experiences/orange.png'
+import MotionCarousel from "../components/MotionCarousel";
 
 const features = [
     { icon: <Car size={40} />, label: "EV Charging Stations" },
@@ -35,6 +36,33 @@ const features = [
     { icon: <Sun size={40} />, label: "Solar  Energy" },
     { icon: <Building size={40} />, label: "Gated Community" },
     { icon: <ThermometerSnowflake size={40} />, label: "Thermal Insulation" },
+];
+
+const cards = [
+  {
+    title: "Built to Belong",
+    description: "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
+    mode: "center",
+    bgColor: "bg-green-800",
+  },
+  {
+    title: "Off-Grid Ready",
+    description: "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
+    image: bgImage,
+    mode: "top",
+  },
+  {
+    title: "Built Light, Built Local",
+    description: "Stone, lime, reclaimed wood — all locally sourced. Built with Kumaoni hands and wisdom.",
+    image: bgImage,
+    mode: "bottom",
+  },
+  {
+    title: "Off-Grid Ready",
+    description: "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
+    image: bgImage,
+    mode: "top",
+  },
 ];
 
 const LandingPage = () => {
@@ -136,8 +164,8 @@ const LandingPage = () => {
                     <h1 className="text-6xl font-bold text-green-900 mb-6 px-4 mx-20">
                         Lorem <br /> Ipsum
                     </h1>
-
-                    <div className="flex overflow-x-auto scrollbar-hide space-x-4 px-4">
+                    <MotionCarousel />
+                    {/* <div className="flex overflow-x-auto scrollbar-hide space-x-4 px-4">
                         <Card
                             mode="center"
                             title="Built to Belong"
@@ -165,7 +193,7 @@ const LandingPage = () => {
                             title="Built Light, Built Local"
                             description="Stone, lime, reclaimed wood — all locally sourced. Built with Kumaoni hands and wisdom."
                         />
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="w-full bg-white py-10 md:px-20">
