@@ -1,138 +1,150 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import member1 from "../assets/img1.jpg";
-import member2 from "../assets/img1.jpg";
-import member3 from "../assets/img1.jpg";
-import member4 from "../assets/img1.jpg"; // extend as needed
+import member1 from "../assets/team/member1.png";
+import member2 from "../assets/team/member2.png";
+import member3 from "../assets/team/member3.png";
+import member4 from "../assets/team/member4.png";
+import member5 from "../assets/team/member5.png";
+import member6 from "../assets/team/member6.png";
+import member7 from "../assets/team/member7.png";
+import member8 from "../assets/team/member8.png";
+import member9 from "../assets/team/member9.png";
+import member10 from "../assets/team/member10.png";
+
 
 const team = [
   {
-    name: "Ashley Right",
-    role: "Pinterest",
-    quote: "Professionals in their craft...",
+    name: "Nand Kishore Agrawal",
+    role: "Chairman, Crystal Crop Protection",
+    desc: "Mr. Nand Kishore Agrawal is the heart and soul, the visionary leader with 40+ years in agriculture. He has driven Crystal’s growth into a leading agrochemical company, offering end-to-end solutions and agri-extension services. A policy advocate and Co-Chair at PHDCCI, he’s held key roles in ACFI, HPMA, and CAPMA. Passionate about social impact, he champions initiatives in education, women’s empowerment, and rural health, earning the Atal Vibhushan Award.",
     image: member1,
   },
   {
-    name: "John Doe",
-    role: "Behance",
-    quote: "A creative powerhouse...",
+    name: "Ankur Agrawal",
+    role: "Managing Director, Crystal Crop Protection",
+    desc: "With 20+ years of experience, Ankur Agrawal has transformed Crystal into one of India’s fastest-growing agri-input firms across agrochemicals, seeds, biologicals, and equipment. A De Montfort and Harvard alumnus, he leads innovation, CSR, and industry engagement as Chair of CropLife India.",
     image: member2,
   },
   {
-    name: "Alex Lee",
-    role: "Adobe",
-    quote: "Designs that speak...",
+    name: "Abhishek Agrawal",
+    role: "Director, Aranyam Greens",
+    desc: "With over 20 years in civil and structural construction, Abhishek Agrawal ensures precision and structural integrity at Aranyam Greens. As Project Director, he leads the execution of complex developments with global expertise and hands-on leadership.",
     image: member3,
   },
   {
-    name: "Lena Smith",
-    role: "Google",
-    quote: "Visionary design execution...",
+    name: "Ateev Agrawal",
+    role: "COO, CFO and Partner, AAR Polymax and Concept Engineers",
+    desc: "Ateev Agrawal drives operations in plastics, automotive, agriculture, and infrastructure, with a ‘Make in India’ focus. An Ahmedabad and Glasgow alumnus, he blends strategy with ethical leadership and community development.",
     image: member4,
   },
   {
-    name: "Ashley Right",
-    role: "Pinterest",
-    quote: "Professionals in their craft...",
-    image: member1,
+    name: "Ayush Agrawal",
+    role: "Director, Aranyam Greens",
+    desc: "Ayush Agrawal leads procurement and financial planning at Aranyam Greens with over a decade of experience. He ensures cost efficiency, vendor management, and sustainable project delivery through strong technical and commercial expertise.",
+    image: member5,
   },
   {
-    name: "John Doe",
-    role: "Behance",
-    quote: "A creative powerhouse...",
-    image: member2,
+    name: "Dhara Agrawal",
+    role: "Director, Aranyam Greens",
+    desc: "With 20+ years in construction and urban planning, Dhara Agrawal oversees project coordination and quality assurance. With degrees in Building Science and Urban Planning, she ensures smooth execution across all teams and consultants.",
+    image: member6,
   },
   {
-    name: "Alex Lee",
-    role: "Adobe",
-    quote: "Designs that speak...",
-    image: member3,
+    name: "Vidushi Agrawal",
+    role: "Marketing Director, Aranyam Greens",
+    desc: "Vidushi Agrawal combines sustainable design and digital marketing expertise to shape Aranyam’s brand identity. With a PG Diploma from NMIMS, she leads creative direction and branding for a modern, nature-aligned lifestyle.",
+    image: member7,
   },
   {
-    name: "Lena Smith",
-    role: "Google",
-    quote: "Visionary design execution...",
-    image: member4,
+    name: "Puneet Kumar Bansal",
+    role: "Founder, Puneet Kumar & Associates / Principal Architect, Aranyam Greens",
+    desc: "With 20+ years in hospitality and sustainable architecture, Puneet designs with a deep respect for nature and vernacular techniques. His vision blends comfort, ecology, and cultural heritage in Aranyam Greens.",
+    image: member8,
   },
   {
-    name: "Lena Smith",
-    role: "Google",
-    quote: "Visionary design execution...",
-    image: member4,
+    name: "Komal Agrawal",
+    role: "Director, Aranyam Greens",
+    desc: "Komal Agrawal leads the project with empathy and strategic vision. With a background in Human Resources and passion for clean, nature-connected living, she shapes Aranyam as a legacy of simplicity and balance for future generations.",
+    image: member9,
   },
   {
-    name: "Lena Smith",
-    role: "Google",
-    quote: "Visionary design execution...",
-    image: member4,
+    name: "Pooja Bansal",
+    role: "Chief Designer, Aranyam Greens",
+    desc: "Pooja Bansal, a Sushant School alumna, creates spaces with emotional depth, sustainability, and precision. Rooted in local traditions, her designs reflect harmony between people, place, and purpose.",
+    image: member10,
   },
 ];
 
-export default function TeamAutoCarousel() {
-  const [index, setIndex] = useState(0);
-  const CARD_WIDTH = 180;
-  const GAP = 0;
 
+export default function TeamAutoCarousel() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const cardWidth = 240;
+  const gap = 24;
+  const containerRef = useRef(null);
+
+  // Auto-scroll every 5s
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % team.length);
-    }, 3000);
+      setActiveIndex((prev) => (prev + 1) % team.length);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
+  // Scroll to focused card
+  useEffect(() => {
+    const container = containerRef.current;
+    if (container) {
+      const scrollTo = activeIndex * (cardWidth + gap);
+      container.scrollTo({ left: scrollTo, behavior: "smooth" });
+    }
+  }, [activeIndex]);
+
   return (
-    <section className="w-full h-[80vh] bg-white flex items-center ">
-      
+    <section className="w-full h-[100vh] bg-white flex items-center justify-center px-10">
+      {/* Left: Info */}
+      <div className="w-1/3 p-10">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeIndex}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.5 }}
+          >
+            <p className="heading font-bold text-gray-800">{team[activeIndex].name}</p>
+            <p className="text-sm text-gray-500 mb-3">{team[activeIndex].role}</p>
+            <p className="para text-gray-700 italic max-w-md">
+              “{team[activeIndex].desc}”
+            </p>
+          </motion.div>
+        </AnimatePresence>
+      </div>
 
       {/* Right: Carousel */}
-      <div className="w-1/2 overflow-hidden relative h-full flex items-center">
-        <motion.div
-          className="flex gap-6"
-          animate={{
-            x: ((index - (team.length - 1)) * (CARD_WIDTH + GAP)),
-          }}
-          transition={{ type: "spring", stiffness: 100, damping: 20 }}
+      <div className="w-2/3 h-[420px] relative">
+        <div
+          ref={containerRef}
+          className="flex gap-6 overflow-x-auto scrollbar-hide items-center h-full px-4"
         >
-          {team.map((member, i) => (
+          {team.map((member, index) => (
             <motion.div
-              key={i}
-              className="rounded-xl overflow-hidden shadow-lg flex-shrink-0"
-              style={{ width: CARD_WIDTH, height: 300 }}
+              key={index}
+              className=" overflow-hidden flex-shrink-0 transition-transform"
+              style={{ width: cardWidth, height: 380 }}
               animate={{
-                scale: i === index ? 1.15 : 1,
-                opacity: i === index ? 1 : 0.6,
+                scale: index === activeIndex ? 1.15 : 1,
+                opacity: index === activeIndex ? 1 : 0.5,
               }}
-              transition={{ duration: 0.5 }}
+              transition={{ type: "spring", stiffness: 200, damping: 25 }}
             >
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover  shadow-md"
               />
             </motion.div>
           ))}
-        </motion.div>
-      </div>
-
-      {/* Left: Team Member Info */}
-      <div className="w-1/2 pr-10">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: 60 }}
-            animate={{ opacity: 1, x: 20 }}
-            exit={{ opacity: 0, x: 20 }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-xl font-semibold text-gray-800">
-              {team[index].name}
-            </p>
-            <p className="text-sm text-gray-500 mb-3">{team[index].role}</p>
-            <p className="text-md text-gray-700 italic max-w-md">
-              “{team[index].quote}”
-            </p>
-          </motion.div>
-        </AnimatePresence>
+        </div>
       </div>
     </section>
   );

@@ -183,7 +183,7 @@ const OurStory = () => {
                 </div>
             </section>
 
-            {/* <TeamSection /> */}
+            <TeamSection />
         </main>
     );
 };

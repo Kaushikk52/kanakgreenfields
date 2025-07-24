@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
     Car,
@@ -16,16 +16,18 @@ import sitePlan from "../assets/site-plan.jpeg";
 import endImage from "../assets/end.jpg";
 import mainImage from "../assets/main3.png";
 import scenary from "../assets/main2.jpg";
-
-import bbq from '../assets/experiences/bbq.jpg'
-import bird from '../assets/experiences/bird.png'
-import butterfly from '../assets/experiences/butterfly.png'
-import coffee from '../assets/experiences/coffee.png'
-import flower from '../assets/experiences/flower.png'
-import forest from '../assets/experiences/forest.jpg'
-import hills from '../assets/experiences/hills.jpg'
-import orange from '../assets/experiences/orange.png'
+import { motion, AnimatePresence } from "framer-motion";
+import bbq from "../assets/experiences/bbq.jpg";
+import bird from "../assets/experiences/bird.png";
+import butterfly from "../assets/experiences/butterfly.png";
+import coffee from "../assets/experiences/coffee.png";
+import flower from "../assets/experiences/flower.png";
+import forest from "../assets/experiences/forest.jpg";
+import hills from "../assets/experiences/hills.jpg";
+import orange from "../assets/experiences/orange.png";
 import MotionCarousel from "../components/MotionCarousel";
+import { Slide } from "../components/Slide";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const features = [
     { icon: <Car size={40} />, label: "EV Charging Stations" },
@@ -39,33 +41,77 @@ const features = [
 ];
 
 const cards = [
-  {
-    title: "Built to Belong",
-    description: "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
-    mode: "center",
-    bgColor: "bg-green-800",
-  },
-  {
-    title: "Off-Grid Ready",
-    description: "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
-    image: bgImage,
-    mode: "top",
-  },
-  {
-    title: "Built Light, Built Local",
-    description: "Stone, lime, reclaimed wood — all locally sourced. Built with Kumaoni hands and wisdom.",
-    image: bgImage,
-    mode: "bottom",
-  },
-  {
-    title: "Off-Grid Ready",
-    description: "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
-    image: bgImage,
-    mode: "top",
-  },
+    {
+        title: "Built to Belong",
+        description:
+            "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
+        mode: "center",
+        bgColor: "bg-green-800",
+    },
+    {
+        title: "Off-Grid Ready",
+        description:
+            "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
+        image: bgImage,
+        mode: "top",
+    },
+    {
+        title: "Built Light, Built Local",
+        description:
+            "Stone, lime, reclaimed wood — all locally sourced. Built with Kumaoni hands and wisdom.",
+        image: bgImage,
+        mode: "bottom",
+    },
+    {
+        title: "Off-Grid Ready",
+        description:
+            "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
+        image: bgImage,
+        mode: "top",
+    },
 ];
 
 const LandingPage = () => {
+    const slides = [
+        <Slide
+            key="1"
+            features={features}
+            title="Sustainable & Smart Living"
+        />,
+        <Slide key="2" features={features} title="Sustainable & Smart" />,
+        <Slide key="3" features={features} title="Sustainable &" />,
+    ];
+
+    const [index, setIndex] = useState(0);
+    const [direction, setDirection] = useState(1); // 1 = right, -1 = left
+
+    const goNext = () => {
+        setDirection(1);
+        setIndex((prev) => (prev + 1) % slides.length);
+    };
+
+    const goPrev = () => {
+        setDirection(-1);
+        setIndex((prev) => (prev - 1 + slides.length) % slides.length);
+    };
+
+    const variants = {
+        enter: (dir) => ({
+            x: dir > 0 ? "100%" : "-100%",
+            opacity: 0,
+            position: "absolute",
+        }),
+        center: {
+            x: 0,
+            opacity: 1,
+            position: "relative",
+        },
+        exit: (dir) => ({
+            x: dir > 0 ? "-100%" : "100%",
+            opacity: 0,
+            position: "absolute",
+        }),
+    };
     return (
         <main className=" overflow-x-clip">
             {/* hero */}
@@ -83,7 +129,7 @@ const LandingPage = () => {
                     className="flex flex-col items-center w-[40%]"
                     style={{ color: "white" }}
                 >
-                    <h1 className="heading mb-10 " style={{ color: "white" }}>
+                    <h1 className="heading mb-10 text-center" style={{ color: "white" }}>
                         The Living Experience
                     </h1>
                     <p className=" text-center para">
@@ -107,31 +153,41 @@ const LandingPage = () => {
             {/* sustainable */}
             <section
                 id="sustainable"
-                className="w-screen min-h-screen bg-cover bg-center flex items-center justify-center flex-col gap-8 px-4 py-12"
+                className="w-screen min-h-screen relative overflow-hidden bg-cover bg-center flex items-center justify-center"
                 style={{
                     backgroundImage: `url(${bgImage})`,
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
                 }}
             >
-                <h1
-                    className="text-2xl md:text-4xl text-white text-center"
-                    style={{ color: "white" }}
-                >
-                    Sustainable & Smart Living
-                </h1>
-                <div className="rounded-lg p-6 md:p-10 w-[90%] max-w-6xl grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 text-white">
-                    {features.map((feature, idx) => (
-                        <div
-                            key={idx}
-                            className="flex flex-col items-center justify-center text-center gap-3 hover:scale-105 rounded-lg p-4 transition"
+                <div className="relative w-2/3  h-full flex items-center justify-center">
+                    <AnimatePresence custom={direction} mode="wait">
+                        <motion.div
+                            key={index}
+                            custom={direction}
+                            variants={variants}
+                            initial="enter"
+                            animate="center"
+                            exit="exit"
+                            transition={{ duration: 0.6 }}
+                            className="w-full"
                         >
-                            <div>{feature.icon}</div>
-                            <p className="md:text-2xl font-medium w-28">
-                                {feature.label}
-                            </p>
-                        </div>
-                    ))}
+                            {slides[index]}
+                        </motion.div>
+                    </AnimatePresence>
+                    {/* Navigation */}
+                    <button
+                        onClick={goPrev}
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2  hover:bg-white/30 text-white p-2 rounded-full z-10"
+                    >
+                        <ChevronLeft size={50} />
+                    </button>
+                    <button
+                        onClick={goNext}
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2  hover:bg-white/30 text-white p-2 rounded-full z-10"
+                    >
+                        <ChevronRight size={50} />
+                    </button>
                 </div>
             </section>
 
@@ -161,8 +217,8 @@ const LandingPage = () => {
             {/* features-2 */}
             <section id="features2" className="w-screen">
                 <div className="w-full bg-white py-40 flex">
-                    <h1 className="text-6xl font-bold text-green-900 mb-6 px-4 mx-20">
-                        Lorem <br /> Ipsum
+                    <h1 className="text-5xl font-bold text-green-900 mb-6 px-2 mx-20">
+                        Built to <br /> Belong
                     </h1>
                     <MotionCarousel />
                     {/* <div className="flex overflow-x-auto scrollbar-hide space-x-4 px-4">
