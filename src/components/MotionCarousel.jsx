@@ -5,33 +5,64 @@ import bgImage from "../assets/1112.jpg";
 
 
 const cards = [
+  // {
+  //   title: "Built to Belong",
+  //   description:
+  //     "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
+  //   mode: "center",
+  //   bgColor: "bg-green-800",
+  // },
   {
-    title: "Built to Belong",
+    title: "Smart by Nature",
     description:
-      "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
-    mode: "center",
-    bgColor: "bg-green-800",
-  },
-  {
-    title: "Off-Grid Ready",
-    description:
-      "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
+      "Homes are placed with the slope, not against it — preserving trees, soil, and silence.",
     image: bgImage,
     mode: "top",
   },
   {
     title: "Built Light, Built Local",
-    description: "Stone, lime, reclaimed wood — all locally sourced. Built with Kumaoni hands and wisdom.",
+    description:
+      "Stone, lime, reclaimed wood — all locally sourced. Built by Kumaoni hands with age-old wisdom.",
     image: bgImage,
-    mode: "bottom",
+    mode: "top",
+  },
+  {
+    title: "Cool Without ACs",
+    description:
+      "Passive design principles ensure homes stay warm in winter, cool in summer — naturally.",
+    image: bgImage,
+    mode: "top",
+  },
+  {
+    title: "Water Conscious, Always",
+    description:
+      " Rainwater harvesting, greywater recycling, eco-irrigation, and native planting keep every drop in balance.",
+    image: bgImage,
+    mode: "top",
+  },
+  {
+    title: "Low Waste Living",
+    description:
+      " Composting, waste segregation, and plastic-free zones help keep the land as clean as the air.",
+    image: bgImage,
+    mode: "top",
   },
   {
     title: "Off-Grid Ready",
     description:
-      "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
+      "Solar-ready systems and modular tech make every home future-proof and self-reliant.",
     image: bgImage,
     mode: "top",
   },
+  {
+    title: "Biodiversity-First",
+    description:
+      " Native flora invites pollinators. Fruit trees feed wildlife. No turf, no tokenism.",
+    image: bgImage,
+    mode: "top",
+  },
+  
+  
 ];
 
 export default function MotionCarousel() {

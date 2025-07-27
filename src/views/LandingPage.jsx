@@ -12,7 +12,7 @@ import {
 import bgImage from "../assets/1112.jpg";
 import FeatureBox from "../components/FeatureBox";
 import Card from "../components/Card";
-import sitePlan from "../assets/site-plan.jpeg";
+import sitePlan from "../assets/site-plan.png";
 import endImage from "../assets/end.jpg";
 import mainImage from "../assets/main3.png";
 import scenary from "../assets/main2.jpg";
@@ -28,6 +28,7 @@ import orange from "../assets/experiences/orange.png";
 import MotionCarousel from "../components/MotionCarousel";
 import { Slide } from "../components/Slide";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import blackLogo from '../assets/blackLogo.png'
 
 const features = [
     { icon: <Car size={40} />, label: "EV Charging Stations" },
@@ -41,27 +42,13 @@ const features = [
 ];
 
 const cards = [
-    {
-        title: "Built to Belong",
-        description:
-            "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
-        mode: "center",
-        bgColor: "bg-green-800",
-    },
-    {
-        title: "Off-Grid Ready",
-        description:
-            "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
-        image: bgImage,
-        mode: "top",
-    },
-    {
-        title: "Built Light, Built Local",
-        description:
-            "Stone, lime, reclaimed wood — all locally sourced. Built with Kumaoni hands and wisdom.",
-        image: bgImage,
-        mode: "bottom",
-    },
+    // {
+    //     title: "Built to Belong",
+    //     description:
+    //         "At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land.",
+    //     mode: "center",
+    //     bgColor: "bg-green-800",
+    // },
     {
         title: "Off-Grid Ready",
         description:
@@ -69,6 +56,7 @@ const cards = [
         image: bgImage,
         mode: "top",
     },
+    
 ];
 
 const LandingPage = () => {
@@ -126,10 +114,13 @@ const LandingPage = () => {
                 }}
             >
                 <div
-                    className="flex flex-col items-center w-[40%]"
+                    className="flex flex-col items-center md:w-[40%] w-[90%]"
                     style={{ color: "white" }}
                 >
-                    <h1 className="heading mb-10 text-center" style={{ color: "white" }}>
+                    <h1
+                        className="heading mb-10 text-center"
+                        style={{ color: "white" }}
+                    >
                         The Living Experience
                     </h1>
                     <p className=" text-center para">
@@ -144,10 +135,10 @@ const LandingPage = () => {
             {/* site plan */}
             <section
                 id="site-plan"
-                className="w-screen h-screen flex justify-between p-15"
+                className="w-screen  flex md:justify-between flex-col md:flex-row p-15"
             >
                 <h1 className="heading ">Site plan</h1>
-                <img src={sitePlan} alt="" />
+                <img src={sitePlan} className="md:h-full h-1/2" alt="" />
             </section>
 
             {/* sustainable */}
@@ -193,14 +184,19 @@ const LandingPage = () => {
 
             {/* features */}
             <section id="features" className="w-screen min-h-[160vh] ">
-                <div className="w-full h-[50vh] flex items-center justify-center">
+                <div className="w-full h-[50vh] flex items-center justify-center relative">
                     <h1 className="heading flex text-center">
                         More than a home, its a living,
                         <br /> breathing experience
                     </h1>
+                    <img
+                        src={blackLogo}
+                        alt="Aranyam"
+                        className="md:h-4/5  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-2/4 opacity-20"
+                    />
                 </div>
                 <div className="w-full md:min-h-[180vh] h-[110vh]  grid grid-cols-2 md:grid-cols-3 gap-0">
-                    <div className=" flex-1 border-4 p-10 border-green-700">
+                    <div className=" flex-1 border-2 md:p-10 p-3 border-green-700">
                         <h1 className="heading">Experiences</h1>
                     </div>
                     <FeatureBox title="Forest Trails" img={forest} />
@@ -253,15 +249,15 @@ const LandingPage = () => {
                 </div>
 
                 <div className="w-full bg-white py-10 md:px-20">
-                    <div className="flex w-full h-[50vh]  items-end px-20">
-                        <div className=" bg-green-700 w-[27vw] h-[40vh] mr-5">
+                    <div className="flex w-full h-[50vh]  items-end md:px-20 px-10">
+                        <div className=" bg-green-700 md:w-[27vw] md:h-[40vh] w-[50vw] h-[18vh] mr-5">
                             <img
                                 className="w-full h-full object-cover"
                                 src={bird}
                                 alt=""
                             />
                         </div>
-                        <div className=" bg-green-700 w-[22vw] h-[35vh]">
+                        <div className=" bg-green-700 md:w-[22vw] md:h-[35vh]  w-[45vw] h-[13vh]">
                             <img
                                 className=" w-full h-full object-cover"
                                 src={scenary}
@@ -270,16 +266,16 @@ const LandingPage = () => {
                         </div>
                     </div>
 
-                    <div className="flex w-full h-[50vh]  px-25 py-6">
+                    <div className="flex md:flex-row flex-col w-full h-[50vh]  md:px-25 py-6">
                         <div className=" bg-green-700 w-[10vw] h-[10vw] mr-5"></div>
-                        <div className=" bg-green-700 w-[27vw] h-[40vh] mr-25">
+                        <div className=" bg-green-700 md:w-[27vw] md:h-[40vh] w-[50vw] h-[18vh] md:mr-25 mx-25 md:mx-0">
                             <img
                                 className="w-full h-full object-cover"
                                 src={orange}
                                 alt=""
                             />
                         </div>
-                        <div className="  w-[35vw] h-[40vh] p-10">
+                        <div className="  md:w-[35vw] w-[100%] h-[40vh]  md:p-10 p-4">
                             <h1 className="heading text-5xl mb-8">
                                 A Landscape That <br /> Breathe With You
                             </h1>
@@ -315,12 +311,12 @@ const LandingPage = () => {
                 }}
             >
                 <div className=" flex flex-col items-center w-full h-1/2 bg-gradient-to-t from-60% from-amber-950/70 to-transparent py-20">
-                    <h1 className=" text-5xl text-center text-white">
+                    <h1 className=" md:text-5xl text-2xl text-center text-white">
                         This Isn't just a House. <br /> It's a Heritage in the
                         Making.
                     </h1>
 
-                    <p className=" w-2/3 text-lg mt-8 text-center font-stretch-50% tracking-tighter  font-bold text-white">
+                    <p className=" md:w-2/3 w-[90%] md:text-lg mt-8 text-center font-stretch-50% tracking-tighter  font-bold text-white">
                         For the founders, Aranyam is personal — a tribute to the
                         childhood they were lucky to live, and a gift to those
                         who still believe in magic without screens. This is for

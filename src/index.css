@@ -22,7 +22,7 @@ h1{
 }
 
 .para{
-    @apply md:text-lg text-lg  
+    @apply md:text-lg text-sm  
 }
 
 .scrollbar-hide::-webkit-scrollbar {

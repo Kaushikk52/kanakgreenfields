@@ -100,9 +100,9 @@ export default function TeamAutoCarousel() {
   }, [activeIndex]);
 
   return (
-    <section className="w-full h-[100vh] bg-white flex items-center justify-center px-10">
+    <section className="w-full h-[100vh] bg-white flex md:flex-row flex-col-reverse items-center justify-center px-10">
       {/* Left: Info */}
-      <div className="w-1/3 p-10">
+      <div className="md:w-1/3 w-[90%] md:p-10 p-2 mt-5">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
@@ -113,15 +113,15 @@ export default function TeamAutoCarousel() {
           >
             <p className="heading font-bold text-gray-800">{team[activeIndex].name}</p>
             <p className="text-sm text-gray-500 mb-3">{team[activeIndex].role}</p>
-            <p className="para text-gray-700 italic max-w-md">
-              “{team[activeIndex].desc}”
+            <p className="para text-gray-700 italic md:max-w-md ">
+              {team[activeIndex].desc}
             </p>
           </motion.div>
         </AnimatePresence>
       </div>
 
       {/* Right: Carousel */}
-      <div className="w-2/3 h-[420px] relative">
+      <div className="md:w-2/3 w-full h-[420px] relative">
         <div
           ref={containerRef}
           className="flex gap-6 overflow-x-auto scrollbar-hide items-center h-full px-4"
