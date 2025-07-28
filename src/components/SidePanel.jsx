@@ -37,14 +37,18 @@ export default function SidePanel() {
           <X size={24} />
         </button>
 
-        <nav className="mt-16 flex flex-col items-start gap-6 pl-6 pr-4">
+        <nav className="mt-16 flex flex-col items-start gap-6 pl-6 pr-4 mb-5">
           <Link to="/" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-800 hover:text-black">
             Home
           </Link>
+        </nav>
+        <h2 className="text-lg font-medium text-gray-400  px-4 ">Properties</h2>
+        <nav className="mt-2 flex flex-col items-start gap-6 pl-6 pr-4">
           <Link to="/explore" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-800 hover:text-black">
-            Explore
+            - Aranyam
           </Link>
         </nav>
+        
       </div>
     </>
   );

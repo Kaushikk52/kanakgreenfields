@@ -2,6 +2,12 @@ import { motion, useAnimation } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import Card from "./Card"; // your dynamic card component
 import bgImage from "../assets/1112.jpg";
+import img1 from '../assets/built/1.png'
+import img2 from '../assets/built/2.png'
+import img3 from '../assets/built/3.jpg'
+import img4 from '../assets/built/4.jpg'
+import img5 from '../assets/built/5.png'
+import img6 from '../assets/built/6.png'
 
 
 const cards = [
@@ -16,42 +22,42 @@ const cards = [
     title: "Smart by Nature",
     description:
       "Homes are placed with the slope, not against it — preserving trees, soil, and silence.",
-    image: bgImage,
+    image: img1,
     mode: "top",
   },
   {
     title: "Built Light, Built Local",
     description:
       "Stone, lime, reclaimed wood — all locally sourced. Built by Kumaoni hands with age-old wisdom.",
-    image: bgImage,
+    image: img2,
     mode: "top",
   },
   {
     title: "Cool Without ACs",
     description:
       "Passive design principles ensure homes stay warm in winter, cool in summer — naturally.",
-    image: bgImage,
+    image: img3,
     mode: "top",
   },
   {
     title: "Water Conscious, Always",
     description:
       " Rainwater harvesting, greywater recycling, eco-irrigation, and native planting keep every drop in balance.",
-    image: bgImage,
+    image: img4,
     mode: "top",
   },
   {
     title: "Low Waste Living",
     description:
       " Composting, waste segregation, and plastic-free zones help keep the land as clean as the air.",
-    image: bgImage,
+    image: img5,
     mode: "top",
   },
   {
     title: "Off-Grid Ready",
     description:
       "Solar-ready systems and modular tech make every home future-proof and self-reliant.",
-    image: bgImage,
+    image: img6,
     mode: "top",
   },
   {

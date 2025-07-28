@@ -37,14 +37,7 @@ export default function Footer() {
                                 About
                             </a>
                         </li>
-                        <li>
-                            <a
-                                href="#projects"
-                                className="hover:text-green-400 transition"
-                            >
-                                Projects
-                            </a>
-                        </li>
+                        
                         <li>
                             <a
                                 href="#team"
