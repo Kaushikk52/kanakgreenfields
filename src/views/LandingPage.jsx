@@ -29,6 +29,7 @@ import MotionCarousel from "../components/MotionCarousel";
 import { Slide } from "../components/Slide";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import blackLogo from '../assets/blackLogo.png'
+import NearbyPlacesSection from "../components/NearbyPlacesSection";
 
 const features = [
     { icon: <Car size={40} />, label: "EV Charging Stations" },
@@ -295,11 +296,7 @@ const LandingPage = () => {
             </section>
 
             {/* nearbyPlaces */}
-            <section className="w-full h-screen bg-white py-10 ">
-                <h1 className="heading font-bold mb-6 px-4 mx-20">
-                    Nearby <br /> Locations
-                </h1>
-            </section>
+            <NearbyPlacesSection />
 
             {/* heritage */}
             <section

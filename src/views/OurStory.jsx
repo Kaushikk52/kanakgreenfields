@@ -146,7 +146,7 @@ const OurStory = () => {
             <section className=" w-screen min-h-screen  relative overflow-hidden flex flex-col items-center justify-center md:gap-10 gap-5">
                 <img
                     src={bgImage2}
-                    className="absolute h-full -z-10 object-cover object-center opacity-15"
+                    className="absolute h-full md:w-full -z-10 object-cover object-center opacity-15"
                     alt=""
                 />
 

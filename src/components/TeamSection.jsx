@@ -129,7 +129,7 @@ export default function TeamAutoCarousel() {
           {team.map((member, index) => (
             <motion.div
               key={index}
-              className=" overflow-hidden flex-shrink-0 transition-transform"
+              className=" overflow-hidden flex-shrink-0 bg-gradient-to-b from-[#457f5e] to-[#274735] transition-transform"
               style={{ width: cardWidth, height: 380 }}
               animate={{
                 scale: index === activeIndex ? 1.15 : 1,
