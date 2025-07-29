@@ -59,11 +59,11 @@ const OurStory = () => {
                 />
 
                 <div className=" h-screen w-screen flex items-center flex-col justify-center gap-8">
-                    <h1 className=" md:text-8xl text-4xl text-green-800 ">Our Story</h1>
-                    <h2 className=" md:text-4xl text-2xl text-green-900">
+                    <h1 className=" md:text-8xl text-4xl text-[#457f5e] ">Our Story</h1>
+                    <h2 className=" md:text-4xl text-2xl text-green-800">
                         Not Built on the Land.
                     </h2>
-                    <p className="  md:text-2xl text-md md:w-1/2 w-[90%] text-center text-green-800">
+                    <p className="  md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]">
                         Tucked into the slopes of Nathuakhan, Aranyam is a
                         homecoming born from childhood memories and reimagined
                         for those seeking stillness. Here, trees stood before
@@ -90,7 +90,7 @@ const OurStory = () => {
                             not here to escape the city — you’re here to
                             remember what real feels like. A place for parents
                             to breathe, for kids to roam free, and for memories
-                            to grow wild
+                            to grow wild.
                         </p>
                     </div>
                     <div className="right h-full w-[600px]">
@@ -103,7 +103,7 @@ const OurStory = () => {
                 </div>
             </section>
 
-            <section className=" w-screen h-screen bg-[#457f5e] flex overflow-hidden flex-col items-center md:justify-center py-10 md:py-0">
+            <section className=" w-screen min-h-screen bg-[#457f5e] flex overflow-hidden flex-col items-center md:justify-center py-10 md:py-8">
                 <h1 className="md:text-5xl text-3xl text-white">What Build Us!</h1>
 
                 <div className=" w-full flex md:flex-row flex-col
@@ -115,7 +115,7 @@ const OurStory = () => {
                                 Aranyam is a home that belongs to the land —
                                 where architecture listens, nature is lived in,
                                 and the pace of the hills is honored. A second
-                                home that feels like your fifirst sense of
+                                home that feels like your first sense of
                                 peace.
                             </p>
                         </div>

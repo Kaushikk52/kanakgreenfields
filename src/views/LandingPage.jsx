@@ -30,6 +30,9 @@ import { Slide } from "../components/Slide";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import blackLogo from '../assets/blackLogo.png'
 import NearbyPlacesSection from "../components/NearbyPlacesSection";
+import tree from '../assets/tree.JPG'
+import leopard from '../assets/leopard.jpg'
+import fruits from '../assets/fruits.jpg'
 
 const features = [
     { icon: <Car size={40} />, label: "EV Charging Stations" },
@@ -251,44 +254,44 @@ const LandingPage = () => {
 
                 <div className="w-full bg-white py-10 md:px-20">
                     <div className="flex w-full h-[50vh]  items-end md:px-20 px-10">
-                        <div className=" bg-green-700 md:w-[27vw] md:h-[40vh] w-[50vw] h-[18vh] mr-5">
+                        <div className=" bg-[#457f5e] md:w-[27vw] md:h-[40vh] w-[50vw] h-[18vh] mr-5">
                             <img
                                 className="w-full h-full object-cover"
-                                src={bird}
+                                src={leopard}
                                 alt=""
                             />
                         </div>
-                        <div className=" bg-green-700 md:w-[22vw] md:h-[35vh]  w-[45vw] h-[13vh]">
+                        <div className=" bg-[#457f5e] md:w-[22vw] md:h-[35vh]  w-[45vw] h-[13vh]">
                             <img
                                 className=" w-full h-full object-cover"
-                                src={scenary}
+                                src={tree}
                                 alt=""
                             />
                         </div>
                     </div>
 
-                    <div className="flex md:flex-row flex-col w-full h-[50vh]  md:px-25 py-6">
-                        <div className=" bg-green-700 w-[10vw] h-[10vw] mr-5"></div>
-                        <div className=" bg-green-700 md:w-[27vw] md:h-[40vh] w-[50vw] h-[18vh] md:mr-25 mx-25 md:mx-0">
+                    <div className="flex md:flex-row flex-col w-full min-h-[50vh]  md:px-25 py-6">
+                        <div className=" bg-[#457f5e] w-[10vw] h-[10vw] mr-5"></div>
+                        <div className=" bg-[#457f5e] md:w-[27vw] md:h-[40vh] w-[50vw] h-[18vh] md:mr-25 mx-25 md:mx-0">
                             <img
                                 className="w-full h-full object-cover"
-                                src={orange}
+                                src={fruits}
                                 alt=""
                             />
                         </div>
-                        <div className="  md:w-[35vw] w-[100%] h-[40vh]  md:p-10 p-4">
+                        <div className="  md:w-[35vw] w-[100%] min-h-[40vh]  md:p-10 p-4">
                             <h1 className="heading text-5xl mb-8">
                                 A Landscape That <br /> Breathe With You
                             </h1>
 
-                            <p className=" para">
+                            <p className=" para m-3">
                                 Aranyam lies deep in Kumaon’s evergreen forests,
                                 where oaks, deodars, and blooming Buransh
                                 thrive. Orchards brim with kafal, apricots, and
                                 litchis, rooted in local life.Wildlife roams
                                 freely—from leopards and black bears to the
                                 Himalayan Monal and rare butterflies. Here,
-                                nature isn’t a backdrop—it’s the story you live
+                                nature isn’t a backdrop—it’s the story you live.
                             </p>
                         </div>
                     </div>
