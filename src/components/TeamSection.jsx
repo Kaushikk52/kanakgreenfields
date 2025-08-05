@@ -10,6 +10,7 @@ import member7 from "../assets/team/member7.png";
 import member8 from "../assets/team/member8.png";
 import member9 from "../assets/team/member9.png";
 import member10 from "../assets/team/member10.png";
+import member11 from "../assets/team/member11.png";
 
 
 const team = [
@@ -26,28 +27,35 @@ const team = [
     image: member2,
   },
   {
+    name: "Komal Agrawal",
+    role: "Developer & Visionary – Aranyam Greens | Lead, KGF Initiatives",
+    desc: "Komal Agrawal drives Aranyam Greens with a future-focused vision rooted in balance and community. A Delhi University alumna with entrepreneurial spirit, she blends empathy with practical leadership. Passionate about nature and mindful living, she ensures quality, coordination, and purpose, creating a legacy of wellness and dignity for coming generations.",
+    image: member11,
+  },
+  
+  {
     name: "Abhishek Agrawal",
     role: "Director, Aranyam Greens",
     desc: "With over 20 years in civil and structural construction, Abhishek Agrawal ensures precision and structural integrity at Aranyam Greens. As Project Director, he leads the execution of complex developments with global expertise and hands-on leadership.",
     image: member3,
   },
   {
-    name: "Ateev Agrawal",
-    role: "COO, CFO and Partner, AAR Polymax and Concept Engineers",
-    desc: "Ateev Agrawal drives operations in plastics, automotive, agriculture, and infrastructure, with a ‘Make in India’ focus. An Ahmedabad and Glasgow alumnus, he blends strategy with ethical leadership and community development.",
-    image: member4,
-  },
-  {
-    name: "Ayush Agrawal",
-    role: "Director, Aranyam Greens",
-    desc: "Ayush Agrawal leads procurement and financial planning at Aranyam Greens with over a decade of experience. He ensures cost efficiency, vendor management, and sustainable project delivery through strong technical and commercial expertise.",
-    image: member5,
+    name: "Pooja Bansal",
+    role: "Chief Designer, Aranyam Greens",
+    desc: "Pooja Bansal, a Sushant School alumna, creates spaces with emotional depth, sustainability, and precision. Rooted in local traditions, her designs reflect harmony between people, place, and purpose.",
+    image: member10,
   },
   {
     name: "Dhara Agrawal",
     role: "Director, Aranyam Greens",
     desc: "With 20+ years in construction and urban planning, Dhara Agrawal oversees project coordination and quality assurance. With degrees in Building Science and Urban Planning, she ensures smooth execution across all teams and consultants.",
     image: member6,
+  },
+  {
+    name: "Ayush Agrawal",
+    role: "Director, Aranyam Greens",
+    desc: "Ayush Agrawal leads procurement and financial planning at Aranyam Greens with over a decade of experience. He ensures cost efficiency, vendor management, and sustainable project delivery through strong technical and commercial expertise.",
+    image: member5,
   },
   {
     name: "Vidushi Agrawal",
@@ -62,17 +70,18 @@ const team = [
     image: member8,
   },
   {
+    name: "Ateev Agrawal",
+    role: "COO, CFO and Partner, AAR Polymax and Concept Engineers",
+    desc: "Ateev Agrawal drives operations in plastics, automotive, agriculture, and infrastructure, with a ‘Make in India’ focus. An Ahmedabad and Glasgow alumnus, he blends strategy with ethical leadership and community development.",
+    image: member4,
+  },
+  {
     name: "Komal Agrawal",
     role: "Director, Aranyam Greens",
     desc: "Komal Agrawal leads the project with empathy and strategic vision. With a background in Human Resources and passion for clean, nature-connected living, she shapes Aranyam as a legacy of simplicity and balance for future generations.",
     image: member9,
   },
-  {
-    name: "Pooja Bansal",
-    role: "Chief Designer, Aranyam Greens",
-    desc: "Pooja Bansal, a Sushant School alumna, creates spaces with emotional depth, sustainability, and precision. Rooted in local traditions, her designs reflect harmony between people, place, and purpose.",
-    image: member10,
-  },
+  
 ];
 
 

@@ -3,6 +3,7 @@ import bgImage from "../assets/bg.jpg";
 import bgImage2 from "../assets/bg2.jpg";
 import bench from "../assets/bench.png";
 import home from "../assets/home.jpg";
+import hills from "../assets/hills.jpg";
 import whiteLogo from "../assets/whiteLogo.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import img1 from "../assets/img1.jpg";
@@ -59,7 +60,9 @@ const OurStory = () => {
                 />
 
                 <div className=" h-screen w-screen flex items-center flex-col justify-center gap-8">
-                    <h1 className=" md:text-8xl text-4xl text-[#457f5e] ">Our Story</h1>
+                    <h1 className=" md:text-8xl text-4xl text-[#457f5e] ">
+                        Our Story
+                    </h1>
                     <h2 className=" md:text-4xl text-2xl text-green-800">
                         Not Built on the Land.
                     </h2>
@@ -75,22 +78,18 @@ const OurStory = () => {
 
                 <div className=" h-screen w-screen flex md:flex-row flex-col items-center  justify-center ">
                     <div className="left h-full md:w-1/2 w-[90%] flex flex-col md:pl-30 pt-10  gap-8">
-                        <h1 className=" heading text-left">
-                            A Different <br />
-                            Kind of <br />
-                            Second Home
-                        </h1>
+                        <h1 className=" heading text-left">About KGF</h1>
 
                         <p className="para md:w-1/2 w-[90%]">
-                            Aranyam is what happens when design slows down.
-                            Here, comfort and nature don’t compete — they
-                            complement.Wide driveways curve with the contours.
-                            Forest trails double as meditation paths. Cottages
-                            come with open decks, not concrete fences. You’re
-                            not here to escape the city — you’re here to
-                            remember what real feels like. A place for parents
-                            to breathe, for kids to roam free, and for memories
-                            to grow wild.
+                            Kanak Green Fields is a project that aims at
+                            building sustainable living that feels like home.
+                            Without altering the natural environment, our
+                            projects not just promote sustainable living, but
+                            also abide by the ethos of local culture,
+                            environment and traditions. With projects like
+                            Aranyam and others in the pipeline, we aim at making
+                            living simpler, but rooting ourselves back to nature
+                            and the very place we came from-our roots.
                         </p>
                     </div>
                     <div className="right h-full w-[600px]">
@@ -104,19 +103,26 @@ const OurStory = () => {
             </section>
 
             <section className=" w-screen min-h-screen bg-[#457f5e] flex overflow-hidden flex-col items-center md:justify-center py-10 md:py-8">
-                <h1 className="md:text-5xl text-3xl text-white">What Build Us!</h1>
+                <h1 className="md:text-5xl text-3xl text-white">
+                    What Build Us!
+                </h1>
 
-                <div className=" w-full flex md:flex-row flex-col
-                 items-center justify-center md:mt-20 mt-7">
+                <div
+                    className=" w-full flex md:flex-row flex-col
+                 items-center justify-center md:mt-20 mt-7"
+                >
                     <div className="md:w-1/3 w-[95%] flex flex-col items-center py-5 ">
                         <div className=" md:w-2/3 w-[90%]  flex flex-col items-center mb-8">
-                            <h1 className="md:text-2xl text-lg text-white mb-3">VISION</h1>
+                            <h1 className="md:text-2xl text-lg text-white mb-3">
+                                VISION
+                            </h1>
                             <p className="md:text-xl text-sm text-white font-extralight">
-                                Aranyam is a home that belongs to the land —
-                                where architecture listens, nature is lived in,
-                                and the pace of the hills is honored. A second
-                                home that feels like your first sense of
-                                peace.
+                                At KGF, we create spaces that belong to the land
+                                — where architecture listens, nature leads, and
+                                sustainability is a way of life. Our work honors
+                                the quiet rhythm of the hills, building not just
+                                in nature, but in partnership with it — leaving
+                                a lighter footprint and a deeper legacy.
                             </p>
                         </div>
                         <div className=" md:w-2/3 w-[90%] flex flex-col items-center">
@@ -150,12 +156,14 @@ const OurStory = () => {
                     alt=""
                 />
 
-                <h1 className="heading text-center mb-3">Where the Hills Feel Like Home</h1>
+                <h1 className="heading text-center mb-3">
+                    Where the Hills Feel Like Home
+                </h1>
 
                 <div className=" flex md:flex-row flex-col">
                     <div className=" md:w-[550px] md:h-[500px] w-full ">
                         <img
-                            src={home}
+                            src={hills}
                             className=" w-full h-full object-cover object-center"
                             alt=""
                         />
