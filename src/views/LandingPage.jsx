@@ -1,14 +1,33 @@
 import React, { useEffect, useState } from "react";
 
 import {
-    Car,
-    Home,
-    ShieldCheck,
-    ThermometerSnowflake,
-    CloudRain,
-    Sun,
-    Building,
+  Car,
+  Dumbbell,
+  Bike,
+  Building2,
+  Gamepad2,
+  LayoutGrid,
+  CircleDot,
+  Waves,
+  Utensils,
+  UtensilsCrossed,
+  Users2,
+  BookOpen,
+  Sofa,
+  LayoutList,
+  Accessibility ,
+  Coffee,
+  Table,
+  ToyBrick ,
+  Building,
+  Home,
+  Shield, 
+  ThermometerSnowflake,
+  CloudRain,
+  Sun,
+  UserCircle
 } from "lucide-react";
+
 import bgImage from "../assets/1112.jpg";
 import FeatureBox from "../components/FeatureBox";
 import Card from "../components/Card";
@@ -20,7 +39,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useScroll, useTransform } from "framer-motion";
 
 import MotionCarousel from "../components/MotionCarousel";
-import { Slide } from "../components/Slide";
+import  Slide  from "../components/Slide";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import blackLogo from "../assets/blackLogo.png";
 import NearbyPlacesSection from "../components/NearbyPlacesSection";
@@ -44,10 +63,10 @@ import img4 from "../assets/img4.jpg";
 import whiteLogo from "../assets/whiteLogo.png";
 
 const LandingPage = () => {
-    const features = [
+    const features1 = [
         { icon: <Car size={40} />, label: "EV Charging Stations" },
         { icon: <Home size={40} />, label: "Smart Systems" },
-        { icon: <ShieldCheck size={40} />, label: "Security Features" },
+        { icon: <Shield  size={40} />, label: "Security Features" },
         {
             icon: <ThermometerSnowflake size={40} />,
             label: "Thermal Insulation",
@@ -60,14 +79,47 @@ const LandingPage = () => {
             label: "Thermal Insulation",
         },
     ];
+
+    const features2 = [
+        { icon: <Table size={40} />, label: "Table Tennis" },
+        { icon: <Dumbbell size={40} />, label: "Badminton Court" },
+        { icon: <Bike size={40} />, label: "Bicycle Rent" },
+        { icon: <Bike size={40} />, label: "Cycling Track" },
+        { icon: <Car size={40} />, label: "Golf Cart" },
+        {
+            icon: <ToyBrick  size={40} />,
+            label: "Children Play Area with Equipments",
+        },
+    ];
+
+    const features3 = [
+        { icon: <Building2 size={40} />, label: "Club House" },
+        { icon: <Dumbbell size={40} />, label: "Gym" },
+        { icon: <LayoutGrid size={40} />, label: "Card Room" },
+        { icon: <CircleDot size={40} />, label: "Billiards" },
+        { icon: <Waves size={40} />, label: "Steam + Sauna + Spa" },
+        { icon: <Utensils size={40} />, label: "Pool Side Restaurant" },
+        { icon: <UtensilsCrossed size={40} />, label: "Lake Side Restaurant" },
+        { icon: <UserCircle  size={40} />, label: "Reception" },
+        { icon: <Users2 size={40} />, label: "Meeting Point" },
+        { icon: <BookOpen size={40} />, label: "Library" },
+        { icon: <Sofa size={40} />, label: "Lounge" },
+        {
+            icon: <LayoutList size={40} />,
+            label: "Multi Purpose Hall (Party Hall)",
+        },
+        { icon: <Accessibility  size={40} />, label: "Wheelchair Accessible" },
+        { icon: <Coffee size={40} />, label: "Alfresco Coffee Shop" },
+    ];
+
     const slides = [
         <Slide
             key="1"
-            features={features}
+            features={features1}
             title="Sustainable & Smart Living"
         />,
-        <Slide key="2" features={features} title="Sustainable & Smart" />,
-        <Slide key="3" features={features} title="Sustainable &" />,
+        <Slide key="2" features={features2} title="Sports Activities" />,
+        <Slide key="3" features={features3} title="Clubhouse Amenities" />,
     ];
 
     const [index, setIndex] = useState(0);
@@ -131,34 +183,17 @@ const LandingPage = () => {
                     ></div>
                 ))}
 
-                {/* Foreground Logo */}
-                <motion.img
-                    src={whiteLogo}
-                    alt="Aranyam"
-                    className="md:h-3/5 h-1/5 z-20"
-                    style={{
-                        y,
-                        scale,
-                    }}
-                />
-            </section>
-
-            <section
-                id="home"
-                className="w-screen h-[40vh] bg-green-900 flex items-center justify-center"
-                style={{
-                    backgroundImage: `url(${mainImage})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "top 20%",
-                }}
-            >
                 <div
-                    className="flex flex-col items-center md:w-[40%] w-[90%]"
+                    className="flex flex-col items-center md:w-[40%] w-[90%] z-20"
                     style={{ color: "white" }}
                 >
+                    <img
+                        src={whiteLogo}
+                        alt="Aranyam"
+                        className=" h-[20vh] z-20"
+                    />
                     <h1
-                        className="heading mb-10 text-center"
+                        className="heading mb-8 text-center"
                         style={{ color: "white" }}
                     >
                         The Living Experience

@@ -1,4 +1,4 @@
-export function Slide({ features, title }) {
+export default function Slide({ features, title }) {
   return (
     <div className="flex flex-col gap-8 px-4 py-12 items-center justify-center w-full">
       <h1 className="text-2xl md:text-4xl text-white text-center">

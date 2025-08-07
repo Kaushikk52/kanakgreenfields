@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import bgImage from "../assets/bg.jpg";
 import bgImage2 from "../assets/bg2.jpg";
 import bench from "../assets/bench.png";
-import home from "../assets/home.jpg";
+import home from "../assets/home.jpeg";
 import hills from "../assets/hills.jpg";
-import whiteLogo from "../assets/whiteLogo.png";
+import KGFLogoWhite from "../assets/KGFLogoWhite.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img2.jpg";
@@ -43,9 +43,9 @@ const OurStory = () => {
 
                 {/* Foreground Logo */}
                 <motion.img
-                    src={whiteLogo}
+                    src={KGFLogoWhite}
                     alt="Aranyam"
-                    className="md:h-3/5 h-1/5 z-20"
+                    className="md:h-2/5 h-1/5 z-20"
                     style={{
                         y,
                         scale,
@@ -67,7 +67,7 @@ const OurStory = () => {
                         Not Built on the Land.
                     </h2>
                     <p className="  md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]">
-                        Tucked into the slopes of Nathuakhan, Aranyam is a
+                        Tucked into the slopes of Nathuakhan, KGF is a
                         homecoming born from childhood memories and reimagined
                         for those seeking stillness. Here, trees stood before
                         blueprints, birdsong before broadband, and every stone
@@ -139,7 +139,7 @@ const OurStory = () => {
                             </p>
                         </div>
                     </div>
-                    <div className=" w-[600px] h-[400px] border">
+                    <div className=" w-[600px] h-[400px]">
                         <img
                             src={home}
                             className=" w-full h-full object-cover object-center"
