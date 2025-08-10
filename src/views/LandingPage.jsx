@@ -56,10 +56,10 @@ import MiniTheater from "../assets/experiences/MiniTheater.png";
 import WaterTrails from "../assets/experiences/WaterTrails.png";
 import YogaGarden from "../assets/experiences/YogaGarden.png";
 
-import img1 from "../assets/img1.jpg";
-import img2 from "../assets/img2.jpg";
-import img3 from "../assets/img3.jpg";
-import img4 from "../assets/img4.jpg";
+import img1 from "../assets/1.png";
+import img2 from "../assets/2.png";
+import img3 from "../assets/3.png";
+import img4 from "../assets/4.png";
 import whiteLogo from "../assets/whiteLogo.png";
 
 const LandingPage = () => {
@@ -184,13 +184,13 @@ const LandingPage = () => {
                 ))}
 
                 <div
-                    className="flex flex-col items-center md:w-[40%] w-[90%] z-20"
+                    className="flex flex-col items-center md:w-[40%] w-[90%] z-20 "
                     style={{ color: "white" }}
                 >
                     <img
                         src={whiteLogo}
                         alt="Aranyam"
-                        className=" h-[20vh] z-20"
+                        className=" h-[32vh] z-20"
                     />
                     <h1
                         className="heading mb-8 text-center"
@@ -216,6 +216,20 @@ const LandingPage = () => {
                 <img src={sitePlan} className="md:h-full h-1/2" alt="" />
             </section> */}
 
+            <section>
+                <div className="w-full h-[50vh] flex items-center justify-center relative">
+                    <h1 className="heading flex text-center">
+                        More than a home, its a living,
+                        <br /> breathing experience
+                    </h1>
+                    <img
+                        src={blackLogo}
+                        alt="Aranyam"
+                        className="md:h-4/5  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-2/4 opacity-20"
+                    />
+                </div>
+            </section>
+
             {/* sustainable */}
             <section
                 id="sustainable"
@@ -226,6 +240,7 @@ const LandingPage = () => {
                     backgroundRepeat: "no-repeat",
                 }}
             >
+                
                 <div className="relative w-2/3  h-full flex items-center justify-center">
                     <AnimatePresence custom={direction} mode="wait">
                         <motion.div
@@ -259,17 +274,7 @@ const LandingPage = () => {
 
             {/* features */}
             <section id="features" className="w-screen min-h-[160vh] ">
-                <div className="w-full h-[50vh] flex items-center justify-center relative">
-                    <h1 className="heading flex text-center">
-                        More than a home, its a living,
-                        <br /> breathing experience
-                    </h1>
-                    <img
-                        src={blackLogo}
-                        alt="Aranyam"
-                        className="md:h-4/5  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-2/4 opacity-20"
-                    />
-                </div>
+                
                 <div className="w-full md:min-h-[180vh] h-[110vh]  grid grid-cols-2 md:grid-cols-3 gap-0">
                     <div className=" flex-1 border-2 md:p-10 p-3 border-green-700">
                         <h1 className="heading">Experiences</h1>
