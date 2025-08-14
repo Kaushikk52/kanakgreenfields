@@ -25,7 +25,8 @@ import {
   ThermometerSnowflake,
   CloudRain,
   Sun,
-  UserCircle
+  UserCircle,
+  Footprints
 } from "lucide-react";
 
 import bgImage from "../assets/1112.jpg";
@@ -64,7 +65,7 @@ import whiteLogo from "../assets/whiteLogo.png";
 
 const LandingPage = () => {
     const features1 = [
-        { icon: <Car size={40} />, label: "EV Charging Stations" },
+        { icon: <Car size={40} />, label: "EV Stations" },
         { icon: <Home size={40} />, label: "Smart Systems" },
         { icon: <Shield  size={40} />, label: "Security Features" },
         {
@@ -76,40 +77,34 @@ const LandingPage = () => {
         { icon: <Building size={40} />, label: "Gated Community" },
         {
             icon: <ThermometerSnowflake size={40} />,
-            label: "Thermal Insulation",
+            label: "Waste Management",
         },
     ];
 
     const features2 = [
         { icon: <Table size={40} />, label: "Table Tennis" },
         { icon: <Dumbbell size={40} />, label: "Badminton Court" },
-        { icon: <Bike size={40} />, label: "Bicycle Rent" },
         { icon: <Bike size={40} />, label: "Cycling Track" },
         { icon: <Car size={40} />, label: "Golf Cart" },
-        {
-            icon: <ToyBrick  size={40} />,
-            label: "Children Play Area with Equipments",
-        },
+        { icon: <ToyBrick  size={40} />, label: "Kids Play Area" },
+        { icon: <Waves size={40} />, label: "Swimming Pool" },
+        { icon: <Footprints size={40} />, label: "Jogging Track" },
+        { icon: <Dumbbell size={40} />, label: "Indoor Games" },
     ];
 
+
     const features3 = [
-        { icon: <Building2 size={40} />, label: "Club House" },
+        
         { icon: <Dumbbell size={40} />, label: "Gym" },
-        { icon: <LayoutGrid size={40} />, label: "Card Room" },
         { icon: <CircleDot size={40} />, label: "Billiards" },
-        { icon: <Waves size={40} />, label: "Steam + Sauna + Spa" },
+        { icon: <Waves size={40} />, label: "Sauna+ Spa" },
         { icon: <Utensils size={40} />, label: "Pool Side Restaurant" },
-        { icon: <UtensilsCrossed size={40} />, label: "Lake Side Restaurant" },
-        { icon: <UserCircle  size={40} />, label: "Reception" },
-        { icon: <Users2 size={40} />, label: "Meeting Point" },
         { icon: <BookOpen size={40} />, label: "Library" },
-        { icon: <Sofa size={40} />, label: "Lounge" },
-        {
-            icon: <LayoutList size={40} />,
-            label: "Multi Purpose Hall (Party Hall)",
-        },
-        { icon: <Accessibility  size={40} />, label: "Wheelchair Accessible" },
-        { icon: <Coffee size={40} />, label: "Alfresco Coffee Shop" },
+        { icon: <Sofa size={40} />, label: "Lounge Area" },
+        { icon: <Coffee size={40} />, label: "Coffee Shop" },
+        { icon: <Sofa size={40} />, label: "Banquet Hall" },
+        
+        
     ];
 
     const slides = [
@@ -184,13 +179,13 @@ const LandingPage = () => {
                 ))}
 
                 <div
-                    className="flex flex-col items-center md:w-[40%] w-[90%] z-20 "
+                    className="flex flex-col items-center w-full h-full justify-center z-20 bg-black/40 px-10 pb-10 "
                     style={{ color: "white" }}
                 >
                     <img
                         src={whiteLogo}
                         alt="Aranyam"
-                        className=" h-[32vh] z-20"
+                        className=" md:h-[32vh] h-[20vh] z-20"
                     />
                     <h1
                         className="heading mb-8 text-center"
@@ -198,7 +193,7 @@ const LandingPage = () => {
                     >
                         The Living Experience
                     </h1>
-                    <p className=" text-center para">
+                    <p className=" text-center para md:w-[40%] w-[90%]">
                         Twenty Cottages, Infinite Cahlmome Aranyam presents 3 &
                         4 BHK independent cottages with attics, private decks,
                         and personal gardens. No shared walls, no clutter—just
@@ -233,7 +228,7 @@ const LandingPage = () => {
             {/* sustainable */}
             <section
                 id="sustainable"
-                className="w-screen min-h-screen relative overflow-hidden bg-cover bg-center flex items-center justify-center"
+                className="w-screen h-[110vh] relative overflow-hidden bg-cover bg-center flex items-center justify-center"
                 style={{
                     backgroundImage: `url(${bgImage})`,
                     backgroundSize: "cover",
@@ -241,7 +236,7 @@ const LandingPage = () => {
                 }}
             >
                 
-                <div className="relative w-2/3  h-full flex items-center justify-center">
+                <div className="relative w-full md:w-2/3  h-full flex items-center justify-center">
                     <AnimatePresence custom={direction} mode="wait">
                         <motion.div
                             key={index}

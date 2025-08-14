@@ -11,7 +11,7 @@ export default function Slide({ features, title }) {
             className="flex flex-col items-center justify-center text-center gap-3 hover:scale-105 rounded-lg p-4 transition"
           >
             <div>{feature.icon}</div>
-            <p className="md:text-2xl font-medium w-28">{feature.label}</p>
+            <p className="md:text-xl font-medium w-28">{feature.label}</p>
           </div>
         ))}
       </div>
