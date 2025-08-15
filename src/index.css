@@ -13,12 +13,11 @@
 }
 h1{
     font-family: "Against";
-    
 }
 .heading{
     color: #457f5e ;
     @apply md:text-4xl text-xl 
-     
+
 }
 
 .para{
@@ -26,5 +25,6 @@ h1{
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;            
+  display: none;          
+  
 }

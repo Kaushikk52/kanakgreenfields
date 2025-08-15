@@ -26,7 +26,12 @@ import {
   CloudRain,
   Sun,
   UserCircle,
-  Footprints
+  Footprints,
+  TvMinimal,
+  Fence,
+  Biohazard,
+  Joystick,
+  Warehouse
 } from "lucide-react";
 
 import bgImage from "../assets/1112.jpg";
@@ -62,11 +67,16 @@ import img2 from "../assets/2.png";
 import img3 from "../assets/3.png";
 import img4 from "../assets/4.png";
 import whiteLogo from "../assets/whiteLogo.png";
+import { LiaTableTennisSolid } from "react-icons/lia";
+import { GiShuttlecock } from "react-icons/gi";
+import { IoMdCar } from "react-icons/io";
+import { TbPlayFootball } from "react-icons/tb";
+import { MdPool } from "react-icons/md";
 
 const LandingPage = () => {
     const features1 = [
         { icon: <Car size={40} />, label: "EV Stations" },
-        { icon: <Home size={40} />, label: "Smart Systems" },
+        { icon: <TvMinimal size={40} />, label: "Smart Systems" },
         { icon: <Shield  size={40} />, label: "Security Features" },
         {
             icon: <ThermometerSnowflake size={40} />,
@@ -74,22 +84,22 @@ const LandingPage = () => {
         },
         { icon: <CloudRain size={40} />, label: "Rainwater Harvesting" },
         { icon: <Sun size={40} />, label: "Solar  Energy" },
-        { icon: <Building size={40} />, label: "Gated Community" },
+        { icon: <Fence size={40} />, label: "Gated Community" },
         {
-            icon: <ThermometerSnowflake size={40} />,
+            icon: <Biohazard size={40} />,
             label: "Waste Management",
         },
     ];
 
     const features2 = [
-        { icon: <Table size={40} />, label: "Table Tennis" },
-        { icon: <Dumbbell size={40} />, label: "Badminton Court" },
+        { icon: <LiaTableTennisSolid size={40} />, label: "Table Tennis" },
+        { icon: <GiShuttlecock  size={40} />, label: "Badminton Court" },
         { icon: <Bike size={40} />, label: "Cycling Track" },
-        { icon: <Car size={40} />, label: "Golf Cart" },
-        { icon: <ToyBrick  size={40} />, label: "Kids Play Area" },
-        { icon: <Waves size={40} />, label: "Swimming Pool" },
+        { icon: <IoMdCar size={40} />, label: "Golf Cart" },
+        { icon: <TbPlayFootball   size={40} />, label: "Kids Play Area" },
+        { icon: <MdPool size={40} />, label: "Swimming Pool" },
         { icon: <Footprints size={40} />, label: "Jogging Track" },
-        { icon: <Dumbbell size={40} />, label: "Indoor Games" },
+        { icon: <Joystick size={40} />, label: "Indoor Games" },
     ];
 
 
@@ -102,7 +112,7 @@ const LandingPage = () => {
         { icon: <BookOpen size={40} />, label: "Library" },
         { icon: <Sofa size={40} />, label: "Lounge Area" },
         { icon: <Coffee size={40} />, label: "Coffee Shop" },
-        { icon: <Sofa size={40} />, label: "Banquet Hall" },
+        { icon: <Warehouse size={40} />, label: "Banquet Hall" },
         
         
     ];
