@@ -34,7 +34,7 @@ import {
   Warehouse
 } from "lucide-react";
 
-import bgImage from "../assets/1112.jpg";
+import bgImage from "../assets/1112.webp";
 import FeatureBox from "../components/FeatureBox";
 import Card from "../components/Card";
 import sitePlan from "../assets/site-plan.png";
@@ -53,19 +53,19 @@ import tree from "../assets/tree.JPG";
 import leopard from "../assets/leopard.jpg";
 import fruits from "../assets/fruits.jpg";
 
-import Forest from "../assets/experiences/forest.jpg";
-import BBQDeck from "../assets/experiences/BBQDeck.png";
-import CoffeeBar from "../assets/experiences/CoffeeBar.png";
-import FruitPickingOrchards from "../assets/experiences/Fruit-PickingOrchards.png";
-import KidsPlayArea from "../assets/experiences/KidsPlayArea.png";
-import MiniTheater from "../assets/experiences/MiniTheater.png";
-import WaterTrails from "../assets/experiences/WaterTrails.png";
-import YogaGarden from "../assets/experiences/YogaGarden.png";
+import Forest from "../assets/experiences/forest.webp";
+import BBQDeck from "../assets/experiences/BBQDeck.webp";
+import CoffeeBar from "../assets/experiences/CoffeeBar.webp";
+import FruitPickingOrchards from "../assets/experiences/orange.webp";
+import KidsPlayArea from "../assets/experiences/KidsPlayArea.webp";
+import MiniTheater from "../assets/experiences/MiniTheater.webp";
+import WaterTrails from "../assets/experiences/WaterTrails.webp";
+import YogaGarden from "../assets/experiences/YogaGarden.webp";
 
-import img1 from "../assets/1.png";
-import img2 from "../assets/2.png";
-import img3 from "../assets/3.png";
-import img4 from "../assets/4.png";
+import img1 from "../assets/1.webp";
+import img2 from "../assets/2.webp";
+import img3 from "../assets/3.webp";
+import img4 from "../assets/4.webp";
 import whiteLogo from "../assets/whiteLogo.png";
 import { LiaTableTennisSolid } from "react-icons/lia";
 import { GiShuttlecock } from "react-icons/gi";

@@ -16,7 +16,7 @@ function App() {
       <EnquiryButton />
       <Routes>
         <Route path="/" element={<OurStory />} />
-        <Route path="/explore" element={<LandingPage />} />
+        <Route path="/aranyam" element={<LandingPage />} />
         <Route path="/terms" element={<TermsOfUse />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>

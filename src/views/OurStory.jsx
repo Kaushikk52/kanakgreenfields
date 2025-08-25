@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import bgImage from "../assets/bg.jpg";
-import bgImage2 from "../assets/bg2.jpg";
+import bgImage2 from "../assets/bg2.webp";
 import bench from "../assets/bench.png";
 import home from "../assets/home.jpeg";
 import hills from "../assets/hills.jpg";
