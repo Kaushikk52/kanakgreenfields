@@ -44,7 +44,7 @@ export default function SidePanel() {
         </nav>
         <h2 className="text-lg font-medium text-gray-400  px-4 ">Properties</h2>
         <nav className="mt-2 flex flex-col items-start gap-6 pl-6 pr-4">
-          <Link to="/explore" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-800 hover:text-black">
+          <Link to="/aranyam" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-800 hover:text-black">
             - Aranyam
           </Link>
         </nav>
