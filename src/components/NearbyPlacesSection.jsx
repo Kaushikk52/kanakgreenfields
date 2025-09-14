@@ -63,10 +63,10 @@ const nearbySpots = [
 
 const places = [
   {
-    name: "Nainital",
-    distance: "45 km",
+    name: "Almora",
+    distance: "38 km",
     desc:
-      "Tucked in the lap of Uttarakhand’s majestic mountains is a hill town famed for its shimmering lake, colonial charm, and panoramic views. Nainital draws you in with its peaceful boat rides, winding forest trails, and the timeless beauty of the Naini Lake reflecting the hills above.",
+      "Perched on a crescent-shaped ridge in Uttarakhand, Almora is a cultural jewel wrapped in pine-scented air. Cobbled lanes, panoramic Himalayan views, and a rich history make this heritage town a perfect blend of nature and nostalgia.",
   },
   {
     name: "Bhimtal",
@@ -75,10 +75,10 @@ const places = [
       "Nestled amidst emerald hills, Bhimtal offers a quieter alternative to its bustling cousin. The lake, dotted with an island at its heart, mirrors the tranquility of the surrounding pines and creates a perfect retreat for those seeking calm and clarity.",
   },
   {
-    name: "Kainchi Dham",
-    distance: "26 km",
+    name: "Bhowali",
+    distance: "32 km",
     desc:
-      "Hidden in a quiet bend of the hills, Kainchi Dham is a spiritual haven blessed with serenity. Known for the ashram established by Neem Karoli Baba, this sacred spot is steeped in silence, drawing seekers from across the world into its peaceful fold.",
+      "Cradled between tall hills, Bhowali is the quiet gateway to the Kumaon region. Known for its orchards and crisp mountain air, this little town is where journeys pause, breathe, and begin anew.",
   },
   {
     name: "Jageshwar",
@@ -87,16 +87,10 @@ const places = [
       "Encircled by ancient deodar forests, Jageshwar is a mystical temple town where time seems to pause. With over a hundred stone temples echoing with centuries of devotion, it’s a place where the sacred and the scenic merge seamlessly.",
   },
   {
-    name: "Almora",
-    distance: "38 km",
+    name: "Kainchi Dham",
+    distance: "26 km",
     desc:
-      "Perched on a crescent-shaped ridge in Uttarakhand, Almora is a cultural jewel wrapped in pine-scented air. Cobbled lanes, panoramic Himalayan views, and a rich history make this heritage town a perfect blend of nature and nostalgia.",
-  },
-  {
-    name: "Bhowali",
-    distance: "32 km",
-    desc:
-      "Cradled between tall hills, Bhowali is the quiet gateway to the Kumaon region. Known for its orchards and crisp mountain air, this little town is where journeys pause, breathe, and begin anew.",
+      "Hidden in a quiet bend of the hills, Kainchi Dham is a spiritual haven blessed with serenity. Known for the ashram established by Neem Karoli Baba, this sacred spot is steeped in silence, drawing seekers from across the world into its peaceful fold.",
   },
   {
     name: "Mukteshwar",
@@ -105,12 +99,19 @@ const places = [
       "High above the valley floor, Mukteshwar is a picture of peace and poetry. With views of snow-capped peaks, dense oak forests, and a charming temple perched on a cliff, it’s a place where nature whispers in every breeze.",
   },
   {
+    name: "Nainital",
+    distance: "45 km",
+    desc:
+      "Tucked in the lap of Uttarakhand’s majestic mountains is a hill town famed for its shimmering lake, colonial charm, and panoramic views. Nainital draws you in with its peaceful boat rides, winding forest trails, and the timeless beauty of the Naini Lake reflecting the hills above.",
+  },
+  {
     name: "Seetla",
     distance: "9 km",
     desc:
       "Wrapped in calm and cool breezes, Seetla is a lesser-known gem near Mukteshwar. Dotted with small farms, scenic trails, and sleepy homesteads, it’s perfect for slow days and soul-deep rest.",
   },
 ];
+
 
 export default function NearbyPlacesSection() {
     const mapRef = useRef(null);

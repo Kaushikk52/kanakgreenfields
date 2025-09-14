@@ -6,7 +6,7 @@ import {
     FaEnvelope,
 } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
-import whiteLogo from "../assets/whiteLogo.png"; // replace with your actual logo path
+import whiteLogo from "../assets/KGFLogoWhite.png"; // replace with your actual logo path
 
 export default function Footer() {
     return (
@@ -17,7 +17,7 @@ export default function Footer() {
                     <img
                         src={whiteLogo}
                         alt="Aranyam Greens"
-                        className="h-44 "
+                        className="h-32 "
                     />
                     <p className="text-sm leading-relaxed text-gray-300">
                         A serene nature-aligned residential community nestled in

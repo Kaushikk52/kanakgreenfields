@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import member1 from "../assets/team/member1.png";
 import member2 from "../assets/team/member2.png";
@@ -47,7 +47,7 @@ const team = [
   },
   {
     name: "Dhara Agrawal",
-    role: "Director, Aranyam Greens",
+    role: "Project Director, Aranyam Greens",
     desc: "With 20+ years in construction and urban planning, Dhara Agrawal oversees project coordination and quality assurance. With degrees in Building Science and Urban Planning, she ensures smooth execution across all teams and consultants.",
     image: member6,
   },
@@ -87,30 +87,135 @@ const team = [
 
 export default function TeamAutoCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
+
   const cardWidth = 240;
   const gap = 24;
-  const containerRef = useRef(null);
+  const step =  180;
 
-  // Auto-scroll every 5s
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % team.length);
-    }, 5000);
-    return () => clearInterval(interval);
+  const AUTO_INTERVAL = 5000;
+  const RESUME_DELAY = 3000;
+
+  const containerRef = useRef(null);
+  const autoTimerRef = useRef(null);
+  const resumeTimerRef = useRef(null);
+
+  // drag state
+  const isDraggingRef = useRef(false);
+  const startXRef = useRef(0);
+  const startScrollLeftRef = useRef(0);
+
+  // NEW: flag programmatic (code-driven) scrolls so we don't pause auto on them
+  const isProgrammaticRef = useRef(false);
+  const setProgrammatic = (v) => (isProgrammaticRef.current = v);
+
+  const clampIndex = (i) => Math.max(0, Math.min(team.length - 1, i));
+
+  const scrollToIndex = useCallback((index, smooth = true) => {
+    const container = containerRef.current;
+    if (!container) return;
+    setProgrammatic(true);
+    container.scrollTo({
+      left: index * step,
+      behavior: smooth ? "smooth" : "auto",
+    });
+    // clear the flag after the browser processes the scroll
+    // a small timeout works well across browsers
+    setTimeout(() => setProgrammatic(false), 250);
+  }, [step]);
+
+  const syncIndexFromScroll = useCallback(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const raw = container.scrollLeft / step;
+    const nearest = clampIndex(Math.round(raw));
+    setActiveIndex(nearest);
+  }, [step]);
+
+  const stopAuto = useCallback(() => {
+    if (autoTimerRef.current) {
+      clearInterval(autoTimerRef.current);
+      autoTimerRef.current = null;
+    }
+    if (resumeTimerRef.current) {
+      clearTimeout(resumeTimerRef.current);
+      resumeTimerRef.current = null;
+    }
   }, []);
 
-  // Scroll to focused card
+  const startAuto = useCallback((delay = 0) => {
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    resumeTimerRef.current = setTimeout(() => {
+      if (autoTimerRef.current) clearInterval(autoTimerRef.current);
+      autoTimerRef.current = setInterval(() => {
+        setActiveIndex((prev) => (prev + 1) % team.length);
+      }, AUTO_INTERVAL);
+    }, delay);
+  }, [AUTO_INTERVAL]);
+
+  // boot auto-advance
   useEffect(() => {
-    const container = containerRef.current;
-    if (container) {
-      const scrollTo = activeIndex * (cardWidth + gap);
-      container.scrollTo({ left: scrollTo, behavior: "smooth" });
-    }
-  }, [activeIndex]);
+    startAuto(0);
+    return stopAuto;
+  }, [startAuto, stopAuto]);
+
+  // keep the focused card centered when activeIndex changes
+  useEffect(() => {
+    scrollToIndex(activeIndex, true);
+  }, [activeIndex, scrollToIndex]);
+
+  // Pause only on *user* scroll, not programmatic
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const onScroll = () => {
+      if (isProgrammaticRef.current) return; // ignore programmatic scrolls
+      stopAuto();
+      syncIndexFromScroll();
+      startAuto(RESUME_DELAY);
+    };
+
+    el.addEventListener("scroll", onScroll, { passive: true });
+    return () => el.removeEventListener("scroll", onScroll);
+  }, [syncIndexFromScroll, startAuto, stopAuto]);
+
+  // pointer drag
+  const onPointerDown = (e) => {
+    const el = containerRef.current;
+    if (!el) return;
+    isDraggingRef.current = true;
+    el.setPointerCapture?.(e.pointerId);
+    startXRef.current = e.clientX;
+    startScrollLeftRef.current = el.scrollLeft;
+    stopAuto();
+    el.style.cursor = "grabbing";
+  };
+
+  const onPointerMove = (e) => {
+    if (!isDraggingRef.current) return;
+    const el = containerRef.current;
+    const dx = e.clientX - startXRef.current;
+    el.scrollLeft = startScrollLeftRef.current - dx;
+  };
+
+  const onPointerUp = (e) => {
+    if (!isDraggingRef.current) return;
+    const el = containerRef.current;
+    isDraggingRef.current = false;
+    el.releasePointerCapture?.(e.pointerId);
+    el.style.cursor = "";
+    startAuto(RESUME_DELAY);
+  };
+
+  const handleCardClick = (index) => {
+    stopAuto();
+    setActiveIndex(index); // scrollToIndex will run via effect
+    startAuto(RESUME_DELAY);
+  };
 
   return (
     <section className="w-full h-[100vh] bg-white flex md:flex-row flex-col-reverse items-center justify-center px-10">
-      {/* Left: Info */}
+      {/* Left */}
       <div className="md:w-1/3 w-[90%] md:p-10 p-2 mt-5">
         <AnimatePresence mode="wait">
           <motion.div
@@ -133,25 +238,59 @@ export default function TeamAutoCarousel() {
       <div className="md:w-2/3 w-full h-[420px] relative">
         <div
           ref={containerRef}
-          className="flex gap-6 overflow-x-auto scrollbar-hide items-center h-full px-4"
+          className="
+            flex gap-6 overflow-x-auto scrollbar-hide items-center h-full px-4
+            snap-x snap-mandatory
+            select-none
+          "
+          style={{ scrollBehavior: "smooth" }}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onPointerCancel={onPointerUp}
+          aria-roledescription="carousel"
+          aria-label="Team members"
         >
           {team.map((member, index) => (
-            <motion.div
+            <motion.button
               key={index}
-              className=" overflow-hidden flex-shrink-0 bg-gradient-to-b from-[#457f5e] to-[#274735] transition-transform"
+              type="button"
+              onClick={() => handleCardClick(index)}
+              className="
+                overflow-hidden flex-shrink-0 bg-gradient-to-b from-[#457f5e] to-[#274735]
+                transition-transform outline-none rounded-xl
+                snap-center
+                focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-emerald-600
+              "
               style={{ width: cardWidth, height: 380 }}
               animate={{
                 scale: index === activeIndex ? 1.15 : 1,
-                opacity: index === activeIndex ? 1 : 0.5,
+                opacity: index === activeIndex ? 1 : 0.6,
               }}
               transition={{ type: "spring", stiffness: 200, damping: 25 }}
+              aria-current={index === activeIndex ? "true" : "false"}
             >
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover  shadow-md"
+                className="w-full h-full object-cover shadow-md pointer-events-none"
+                draggable={false}
               />
-            </motion.div>
+            </motion.button>
+          ))}
+        </div>
+
+        {/* Dots */}
+        <div className="absolute -bottom-2 left-0 right-0 flex justify-center gap-2">
+          {team.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => handleCardClick(i)}
+              className={`h-2 rounded-full transition-all ${
+                i === activeIndex ? "w-6 bg-emerald-700" : "w-2 bg-emerald-300"
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
           ))}
         </div>
       </div>
