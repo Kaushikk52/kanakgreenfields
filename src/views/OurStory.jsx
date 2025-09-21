@@ -11,6 +11,8 @@ import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpg";
 import img4 from "../assets/img4.jpg";
 import TeamSection from "../components/TeamSection";
+import TeamSectionBackup from "../components/TeamSectionBackup";
+import TeamSectionExperiment from "../components/TeamSectionExperiment";
 
 const OurStory = () => {
     const bgImages = [img1, img2, img3, img4];
@@ -53,7 +55,7 @@ const OurStory = () => {
                 />
             </section>
 
-            <section className=" w-screen min-h-[240vh] relative">
+            <section className=" w-screen md:min-h-[240vh] relative">
                 <img
                     src={bgImage2}
                     className="absolute h-full -z-10 object-cover object-center opacity-15"
@@ -76,7 +78,7 @@ const OurStory = () => {
                     </p>
                 </div>
 
-                <div className=" h-screen w-screen flex md:flex-row flex-col items-center  justify-center ">
+                <div className=" h-screen w-screen flex md:flex-row flex-col-reverse items-center  justify-center ">
                     <div className="left h-full md:w-1/2 w-[90%] flex flex-col md:pl-30 pt-10  gap-8">
                         <h1 className=" heading text-left">About KGF</h1>
 
@@ -192,7 +194,7 @@ const OurStory = () => {
                 </div>
             </section>
 
-            <TeamSection />
+            <TeamSectionExperiment />
         </main>
     );
 };

@@ -278,7 +278,7 @@ const LandingPage = () => {
             </section>
 
             {/* features */}
-            <section id="features" className="w-screen min-h-[160vh] ">
+            <section id="features" className="w-screen md:min-h-[160vh] ">
                 
                 <div className="w-full md:min-h-[180vh] h-[110vh]  grid grid-cols-2 md:grid-cols-3 gap-0">
                     <div className=" flex-1 border-2 md:p-10 p-3 border-green-700">
@@ -300,8 +300,8 @@ const LandingPage = () => {
 
             {/* features-2 */}
             <section id="features2" className="w-screen">
-                <div className="w-full bg-white py-40 flex">
-                    <h1 className="text-5xl font-bold text-green-900 mb-6 px-2 mx-20">
+                <div className="w-full bg-white md:py-40 py-20 flex md:flex-row flex-col">
+                    <h1 className="md:text-5xl text-4xl font-bold text-green-900 mb-10 md:mb-6 px-2 mx-5   md:mx-20">
                         Built to <br /> Belong
                     </h1>
                     <MotionCarousel />
@@ -336,8 +336,8 @@ const LandingPage = () => {
                     </div> */}
                 </div>
 
-                <div className="w-full bg-white py-10 md:px-20">
-                    <div className="flex w-full h-[50vh]  items-end md:px-20 px-10">
+                <div className="w-full bg-white md:py-10 md:px-20">
+                    <div className="flex w-full md:h-[50vh]  items-end md:px-20 px-10">
                         <div className=" bg-[#457f5e] md:w-[27vw] md:h-[40vh] w-[50vw] h-[18vh] mr-5">
                             <img
                                 className="w-full h-full object-cover"
@@ -354,16 +354,16 @@ const LandingPage = () => {
                         </div>
                     </div>
 
-                    <div className="flex md:flex-row flex-col w-full min-h-[50vh]  md:px-25 py-6">
-                        <div className=" bg-[#457f5e] w-[10vw] h-[10vw] mr-5"></div>
-                        <div className=" bg-[#457f5e] md:w-[27vw] md:h-[40vh] w-[50vw] h-[18vh] md:mr-25 mx-25 md:mx-0">
+                    <div className="flex md:flex-row flex-col w-full min-h-[50vh]  md:px-25 md:py-6">
+                        <div className=" bg-[#457f5e] w-[10vw] h-[10vw] hidden md:block mr-5"></div>
+                        <div className=" bg-[#457f5e] md:w-[27vw] md:h-[40vh] w-[70vw] h-[25vh] md:mr-25 mt-5 md:mt-0 mx-15 md:mx-0">
                             <img
                                 className="w-full h-full object-cover"
                                 src={fruits}
                                 alt=""
                             />
                         </div>
-                        <div className="  md:w-[35vw] w-[100%] min-h-[40vh]  md:p-10 p-4">
+                        <div className="  md:w-[35vw] w-[100%] min-h-[40vh]  md:p-10 p-8">
                             <h1 className="heading text-5xl mb-8">
                                 A Landscape That <br /> Breathe With You
                             </h1>

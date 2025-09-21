@@ -160,15 +160,15 @@ export default function NearbyPlacesSection() {
             className="bg-[#f7f7f7] p-4 rounded-lg shadow hover:shadow-md transition"
         >
             <div
-                className="flex items-center gap-4 cursor-pointer"
+                className="flex items-center md:gap-4 gap-2 cursor-pointer"
                 onClick={() => handleToggle(index)}
             >
                 <div className="text-green-600 text-xl">
                     <FaMapMarkerAlt />
                 </div>
                 <div>
-                    <h4 className="text-md font-semibold">{place.name}</h4>
-                    <p className="text-sm text-gray-500">
+                    <h4 className="md:text-md text-sm font-semibold text-nowrap ">{place.name}</h4>
+                    <p className="md:text-sm text-xs text-gray-500">
                         {place.distance} away
                     </p>
                 </div>
@@ -187,10 +187,10 @@ export default function NearbyPlacesSection() {
 
     return (
         <section className="w-full min-h-screen bg-white py-10 relative">
-            <h1 className="heading font-bold mb-6 px-4 mx-20">
+            <h1 className="heading font-bold mb-6 px-4 md:mx-20 mx-5">
                 Nearby <br /> Locations
             </h1>
-            <div className="flex flex-col md:flex-row gap-8 px-20">
+            <div className="flex flex-row md:flex-row md:gap-8 gap-4 px-5 md:px-20">
                 {/* Left column */}
                 <div className="flex-1 flex flex-col gap-6">
                     {places.slice(0, 4).map((place, i) => renderCard(place, i))}
