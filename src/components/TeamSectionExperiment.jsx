@@ -94,7 +94,7 @@ export default function TeamSectionExperiment() {
   const containerRef = useRef(null);
 
   const CARD_WIDTH = 240;
-  const GAP = 0;                 // matches Tailwind gap-6
+  const GAP = 15;                 // matches Tailwind gap-6
   const STRIDE = CARD_WIDTH + GAP;
 
   // 1) Infinite autoplay: advance every 5s
@@ -117,7 +117,7 @@ export default function TeamSectionExperiment() {
   const next = () => setActiveIndex((i) => (i + 1) % team.length);
 
   return (
-    <section className="w-full min-h-[100vh] bg-white flex md:flex-row flex-col-reverse items-center justify-center px-10 select-none">
+    <section className="w-screen md:min-h-screen min-h-[130vh] bg-white flex md:flex-row flex-col-reverse items-center justify-center select-none">
       {/* Left: Info */}
       <div className="md:w-1/3 w-[90%] md:p-10 p-2 mt-5">
         <p className="heading font-bold text-gray-800">{team[activeIndex].name}</p>

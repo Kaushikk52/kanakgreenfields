@@ -78,8 +78,8 @@ const OurStory = () => {
                     </p>
                 </div>
 
-                <div className=" h-screen w-screen flex md:flex-row flex-col-reverse items-center  justify-center ">
-                    <div className="left h-full md:w-1/2 w-[90%] flex flex-col md:pl-30 pt-10  gap-8">
+                <div className=" min-h-screen w-screen flex md:flex-row flex-col-reverse items-center  justify-center ">
+                    <div className="left h-full md:w-1/2 w-[90%] flex flex-col md:pl-30 py-10  gap-8">
                         <h1 className=" heading text-left">About KGF</h1>
 
                         <p className="para md:w-1/2 w-[90%]">
