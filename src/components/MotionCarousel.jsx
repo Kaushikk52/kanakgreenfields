@@ -1,7 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import Card from "./Card";
-import bgImage from "../assets/1112.jpg";
+import bgImage from "../assets/1112.webp";
 import img1 from "../assets/built/1.png";
 import img2 from "../assets/built/2.png";
 import img3 from "../assets/built/3.jpg";
