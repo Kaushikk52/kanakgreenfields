@@ -13,7 +13,7 @@ function App() {
     <>
     <BrowserRouter>
       <SidePanel />
-      <EnquiryButton />
+      {/* <EnquiryButton /> */}
       <Routes>
         <Route path="/" element={<OurStory />} />
         <Route path="/aranyam" element={<LandingPage />} />

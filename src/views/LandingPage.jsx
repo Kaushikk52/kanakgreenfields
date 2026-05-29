@@ -206,7 +206,7 @@ const LandingPage = () => {
                     <p className=" text-center para md:w-[40%] w-[90%]">
                         Twenty Cottages, Infinite Cahlmome Aranyam presents 3 &
                         4 BHK independent cottages with attics, private decks,
-                        and personal gardens. No shared walls, no clutter—just
+                        and personal gardens. No shared walls, no clutter just
                         open skies, fresh air, and pure space.
                     </p>
                 </div>
@@ -373,9 +373,9 @@ const LandingPage = () => {
                                 where oaks, deodars, and blooming Buransh
                                 thrive. Orchards brim with kafal, apricots, and
                                 litchis, rooted in local life.Wildlife roams
-                                freely—from leopards and black bears to the
+                                freely from leopards and black bears to the
                                 Himalayan Monal and rare butterflies. Here,
-                                nature isn’t a backdrop—it’s the story you live.
+                                nature isn’t a backdrop it’s the story you live.
                             </p>
                         </div>
                     </div>
@@ -401,7 +401,7 @@ const LandingPage = () => {
                     </h1>
 
                     <p className=" md:w-2/3 w-[90%] md:text-lg mt-8 text-center font-stretch-50% tracking-tighter  font-bold text-white">
-                        For the founders, Aranyam is personal — a tribute to the
+                        For the founders, Aranyam is personal a tribute to the
                         childhood they were lucky to live, and a gift to those
                         who still believe in magic without screens. This is for
                         the children who deserve trees over tablets. For parents

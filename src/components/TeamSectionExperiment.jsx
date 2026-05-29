@@ -16,85 +16,81 @@ import member10 from "../assets/team/member10.png";
 import member11 from "../assets/team/member11.png";
 
 const team = [
-    {
-        name: "Nand Kishore Agrawal",
-        role: "Chairman, Crystal Crop Protection",
-        desc: "Mr. Nand Kishore Agrawal is the heart and soul, the visionary leader with 40+ years in agriculture. He has driven Crystal’s growth into a leading agrochemical company, offering end-to-end solutions and agri-extension services. A policy advocate and Co-Chair at PHDCCI, he’s held key roles in ACFI, HPMA, and CAPMA. Passionate about social impact, he champions initiatives in education, women’s empowerment, and rural health, earning the Atal Vibhushan Award.",
-        image: member1,
-    },
-    {
-        name: "Ankur Agrawal",
-        role: "Managing Director, Crystal Crop Protection",
-        desc: "With 20+ years of experience, Ankur Agrawal has transformed Crystal into one of India’s fastest-growing agri-input firms across agrochemicals, seeds, biologicals, and equipment. A De Montfort and Harvard alumnus, he leads innovation, CSR, and industry engagement as Chair of CropLife India.",
-        image: member2,
-    },
-    {
-        name: "Komal Agrawal",
-        role: "Developer & Visionary – Aranyam Greens | Lead, KGF Initiatives",
-        desc: "Komal Agrawal drives Aranyam Greens with a future-focused vision rooted in balance and community. A Delhi University alumna with entrepreneurial spirit, she blends empathy with practical leadership. Passionate about nature and mindful living, she ensures quality, coordination, and purpose, creating a legacy of wellness and dignity for coming generations.",
-        image: member11,
-    },
+  {
+    name: "Mr. N.K. Aggarwal",
+    role: "Mentor & Long-term Guide",
+    desc: "Brings decades of experience and a steady, long-view perspective to every decision we make.",
+    image: member1,
+  },
+  {
+    name: "Ankur Aggarwal",
+    role: "Capital Steward",
+    desc: "Ensures every step we take is measured, responsible, and built to last.",
+    image: member2,
+  },
+  {
+    name: "Komal Aggarwal",
+    role: "Project Continuity & Team Balance",
+    desc: "Keeps the process grounded, thoughtful, and aligned across people and timelines.",
+    image: member11,
+  },
 
-    {
-        name: "Abhishek Agrawal",
-        role: "Director, Aranyam Greens",
-        desc: "With over 20 years in civil and structural construction, Abhishek Agrawal ensures precision and structural integrity at Aranyam Greens. As Project Director, he leads the execution of complex developments with global expertise and hands-on leadership.",
-        image: member3,
-    },
-    {
-        name: "Pooja Bansal",
-        role: "Chief Designer, Aranyam Greens",
-        desc: "Pooja Bansal, a Sushant School alumna, creates spaces with emotional depth, sustainability, and precision. Rooted in local traditions, her designs reflect harmony between people, place, and purpose.",
-        image: member10,
-    },
-    {
-        name: "Dhara Agrawal",
-        role: "Director, Aranyam Greens",
-        desc: "With 20+ years in construction and urban planning, Dhara Agrawal oversees project coordination and quality assurance. With degrees in Building Science and Urban Planning, she ensures smooth execution across all teams and consultants.",
-        image: member6,
-    },
-    {
-        name: "Ayush Agrawal",
-        role: "Director, Aranyam Greens",
-        desc: "Ayush Agrawal leads procurement and financial planning at Aranyam Greens with over a decade of experience. He ensures cost efficiency, vendor management, and sustainable project delivery through strong technical and commercial expertise.",
-        image: member5,
-    },
-    {
-        name: "Vidushi Agrawal",
-        role: "Marketing Director, Aranyam Greens",
-        desc: "Vidushi Agrawal combines sustainable design and digital marketing expertise to shape Aranyam’s brand identity. With a PG Diploma from NMIMS, she leads creative direction and branding for a modern, nature-aligned lifestyle.",
-        image: member7,
-    },
-    {
-        name: "Puneet Kumar Bansal",
-        role: "Founder, Puneet Kumar & Associates / Principal Architect, Aranyam Greens",
-        desc: "With 20+ years in hospitality and sustainable architecture, Puneet designs with a deep respect for nature and vernacular techniques. His vision blends comfort, ecology, and cultural heritage in Aranyam Greens.",
-        image: member8,
-    },
-    {
-        name: "Ateev Agrawal",
-        role: "COO, CFO and Partner, AAR Polymax and Concept Engineers",
-        desc: "Ateev Agrawal drives operations in plastics, automotive, agriculture, and infrastructure, with a ‘Make in India’ focus. An Ahmedabad and Glasgow alumnus, he blends strategy with ethical leadership and community development.",
-        image: member4,
-    },
-    {
-        name: "Komal Agrawal",
-        role: "Director, Aranyam Greens",
-        desc: "Komal Agrawal leads the project with empathy and strategic vision. With a background in Human Resources and passion for clean, nature-connected living, she shapes Aranyam as a legacy of simplicity and balance for future generations.",
-        image: member9,
-    },
+  {
+    name: "Abhishek Aggarwal",
+    role: "Execution & Project Stewardship",
+    desc: "On-ground, ensuring what is envisioned is built with care and precision.",
+    image: member3,
+  },
+  {
+    name: "Pooja Bansal",
+    role: "Project Guide & Design Custodian",
+    desc: "Holds the design intent together, making sure it stays true from idea to execution.",
+    image: member10,
+  },
+  {
+    name: "Dhara Aggarwal",
+    role: "Project Management & Communication",
+    desc: "Connects teams, ideas, and people, keeping everything moving with clarity.",
+    image: member6,
+  },
+  {
+    name: "Ayush Aggarwal",
+    role: "Construction Systems & On-ground Support",
+    desc: "Focuses on how things are built, ensuring strength, efficiency, and sensitivity to the site.",
+    image: member5,
+  },
+  {
+    name: "Vidushi Aggarwal",
+    role: "Brand Voice & Guest Experience",
+    desc: "Shapes how the world experiences KGF, from the first interaction to the stay itself.",
+    image: member7,
+  },
+  {
+    name: "Puneet Bansal",
+    role: "Principal Architect & Design Lead",
+    desc: "Shapes spaces that respond to the land, not override it.",
+    image: member8,
+  },
+  {
+    name: "Ateev Aggarwal",
+    role: "Thought & Relationship Building",
+    desc: "Builds long-term relationships, bringing people into this journey with us.",
+    image: member4,
+  },
+  {
+    name: "Komal Agrawal",
+    role: "Director, Aranyam Greens",
+    desc: "Komal Agrawal leads the project with empathy and strategic vision. With a background in Human Resources and passion for clean, nature-connected living, she shapes Aranyam as a legacy of simplicity and balance for future generations.",
+    image: member9,
+  },
 ];
-
-
-
-
 
 export default function TeamSectionExperiment() {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef(null);
 
   const CARD_WIDTH = 240;
-  const GAP = 15;                 // matches Tailwind gap-6
+  const GAP = 15; // matches Tailwind gap-6
   const STRIDE = CARD_WIDTH + GAP;
 
   // 1) Infinite autoplay: advance every 5s
@@ -117,65 +113,84 @@ export default function TeamSectionExperiment() {
   const next = () => setActiveIndex((i) => (i + 1) % team.length);
 
   return (
-    <section className="w-screen md:min-h-screen min-h-[130vh] bg-white flex md:flex-row flex-col-reverse items-center justify-center select-none">
-      {/* Left: Info */}
-      <div className="md:w-1/3 w-[90%] md:p-10 p-2 mt-5">
-        <p className="heading font-bold text-gray-800">{team[activeIndex].name}</p>
-        <p className="text-sm text-gray-500 mb-3">{team[activeIndex].role}</p>
-        <p className="para text-gray-700 italic md:max-w-md">{team[activeIndex].desc}</p>
-      </div>
+    <section className="bg-white py-12 md:py-20">
+      <h1 className="text-center mb-3 md:text-7xl text-3xl text-[#457f5e] ">Who We Are</h1>
+      <h2 className="text-center md:text-4xl text-2xl text-green-800">
+        A family with an intention
+      </h2>
+      <div className="w-screen md:min-h-screen min-h-[130vh] flex md:flex-row flex-col-reverse items-center justify-center select-none">
+        {/* Left: Info */}
+        <div className="md:w-1/3 w-[90%] md:p-10 p-2 mt-5">
+          <p className="heading font-bold text-gray-800">
+            {team[activeIndex].name}
+          </p>
+          <p className="text-sm text-gray-500 mb-3">{team[activeIndex].role}</p>
+          <p className="para text-gray-700 italic md:max-w-md">
+            {team[activeIndex].desc}
+          </p>
+        </div>
 
-      {/* Right: Carousel */}
-      <div className="md:w-2/3 w-full h-[420px] relative">
-        {/* Nav buttons */}
-        <button
-          onClick={prev}
-          aria-label="Previous"
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/90 hover:bg-white shadow p-2"
-        >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M15 6L9 12L15 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-          </svg>
-        </button>
-        <button
-          onClick={next}
-          aria-label="Next"
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/90 hover:bg-white shadow p-2"
-        >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-          </svg>
-        </button>
+        {/* Right: Carousel */}
+        <div className="md:w-2/3 w-full h-[420px] relative">
+          {/* Nav buttons */}
+          <button
+            onClick={prev}
+            aria-label="Previous"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/90 hover:bg-white shadow p-2"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M15 6L9 12L15 18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={next}
+            aria-label="Next"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/90 hover:bg-white shadow p-2"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 6L15 12L9 18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
 
-        <div
-          ref={containerRef}
-          className="flex gap-6 overflow-x-auto items-center h-full px-4
+          <div
+            ref={containerRef}
+            className="flex gap-6 overflow-x-auto items-center h-full px-4
                      [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-          /* NOTE: avoid 'scroll-smooth' class here—native smooth in JS is enough */
-        >
-          {team.map((member, index) => {
-            const isActive = index === activeIndex;
-            return (
-              <div
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                className={`overflow-hidden flex-shrink-0 bg-gradient-to-b from-[#457f5e] to-[#274735]
+            /* NOTE: avoid 'scroll-smooth' class here—native smooth in JS is enough */
+          >
+            {team.map((member, index) => {
+              const isActive = index === activeIndex;
+              return (
+                <div
+                  key={index}
+                  onClick={() => setActiveIndex(index)}
+                  className={`overflow-hidden flex-shrink-0 bg-gradient-to-b from-[#457f5e] to-[#274735]
                             transition-transform duration-300 ease-out
                             ${isActive ? "scale-110 opacity-100" : "scale-100 opacity-60"}`}
-                style={{ width: CARD_WIDTH, height: 380 }}
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover shadow-md pointer-events-none"
-                  draggable={false}
-                />
-              </div>
-            );
-          })}
+                  style={{ width: CARD_WIDTH, height: 380 }}
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover shadow-md pointer-events-none"
+                    draggable={false}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
