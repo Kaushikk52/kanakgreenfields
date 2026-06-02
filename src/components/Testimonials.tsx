@@ -78,11 +78,11 @@ export default function Testimonials() {
     <section className="w-screen relative py-12 overflow-hidden">
       {/* Heading */}
       <p className="text-center text-xs tracking-widest uppercase text-[#457f5e] mb-2">
-        Testimonials
+        Testimonials 
       </p>
-      <h2 className="text-center text-3xl md:text-4xl text-[#2a5c3f] mb-10 font-medium">
+      <h1 className="text-center text-3xl md:text-4xl text-[#457f5e] mb-10 font-medium">
         In Their Words
-      </h2>
+      </h1>
 
       {/* Single row: arrow | quote | arrow */}
       <div className="relative max-w-4xl mx-auto px-4 select-none">
