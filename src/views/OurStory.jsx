@@ -15,6 +15,7 @@ import img4 from "../assets/img4.jpg";
 import TeamSection from "../components/TeamSection";
 import TeamSectionBackup from "../components/TeamSectionBackup";
 import TeamSectionExperiment from "../components/TeamSectionExperiment";
+import Testimonials from "../components/Testimonials";
 
 const OurStory = () => {
   const bgImages = [img1, img2, img3, img4];
@@ -232,7 +233,7 @@ const OurStory = () => {
       </section> */}
 
       {/* Testimonials */}
-
+        <Testimonials />
 
       <TeamSectionExperiment />
     </main>
