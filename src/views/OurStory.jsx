@@ -67,24 +67,26 @@ const OurStory = () => {
             Shaped by the hills, guided by family
           </p>
           <p className="md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]">
-            Kanak Green Fields began long before it was a company.
+            The journey of Kanak Green Fields started long before it became a
+            company.
           </p>
 
           <p className="md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]">
-            It began with time spent in the Kumaon hills, in slow afternoons, in
-            familiar paths, in a way of life that stayed with us long after we
-            left. Named after our mother, Kanak, who grew up here, this is an
-            extension of what she always believed: that the mountains are not to
-            be claimed, only cared for.
+            It began with time spent in the hills of Kumaon. What started as the
+            life we spent slow afternoons in, walking familiar paths in, and
+            revering the mountains of Kumaon became, in a way, a way of life
+            that stayed with us long after we left. Named after our mother,
+            Kanak, who grew up here, this is an extension of our own home that
+            we now want to share with the world.
           </p>
           <p className="  md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]">
-            As a family, we came together not to build more, but to build
-            carefully, to create places where others can come and live in the
-            same quiet rhythm we once knew.
+            As a family, we came together not to build houses, but to make homes
+            in the hills- places where others can come and build life in the
+            same quiet rhythm we once knew to be home.
           </p>
         </div>
 
-        <div className=" min-h-screen w-screen flex md:flex-row flex-col-reverse items-center  justify-center ">
+        {/* <div className=" min-h-screen w-screen flex md:flex-row flex-col-reverse items-center  justify-center ">
           <div className="left h-full md:w-1/2 w-[90%] flex flex-col md:pl-30 py-10  gap-8">
             <h1 className=" heading text-left">About KGF</h1>
 
@@ -105,7 +107,7 @@ const OurStory = () => {
               alt=""
             />
           </div>
-        </div>
+        </div> */}
       </section>
 
       <section className="w-screen min-h-screen bg-[#457f5e] flex overflow-hidden flex-col items-center md:justify-center py-10 md:py-8">
@@ -121,20 +123,22 @@ const OurStory = () => {
               </h1>
               <div className="flex-col space-y-2">
                 <p className="md:text-xl text-sm text-white font-extralight">
-                  We don’t see the hills as land to develop, but as a life to be
-                  part of.
+                  To us, the hills are not just land, but a life ready to
+                  welcome everyone who seeks it.
                 </p>
                 <p className="md:text-xl text-sm text-white font-extralight">
-                  Every place here asks something of you - to slow down, to
-                  notice, to take only what you need. We believe building in the
-                  mountains comes with responsibility: to protect what exists,
-                  to disturb as little as possible, and to leave behind
-                  something that sits gently within its surroundings.
+                  Every place here asks nothing out of you, but instead gives
+                  you a space to slow down, to notice, to take only what you
+                  need. We believe mountains come with responsibility: to
+                  protect what exists, to disturb as little as possible, and to
+                  leave behind something that sits gently within its
+                  surroundings. This isn’t about scale or speed. It’s about a
+                  place that’s willing to hold you when you stop.
                 </p>
-                <p className="md:text-xl text-sm text-white font-extralight">
+                {/* <p className="md:text-xl text-sm text-white font-extralight">
                   This isn’t about scale or speed. It’s about care, patience,
                   and knowing when to stop.
-                </p>
+                </p> */}
               </div>
             </div>
 
@@ -156,24 +160,25 @@ const OurStory = () => {
                 Our Approach
               </h1>
               <h2 className="md:text-xl text-sm text-white font-bold">
-                Listening to the land before building on it
+                Listening to the land before building on it.
               </h2>
-              <h2 className="md:text-xl text-sm text-white mb-3 font-bold">
+              {/* <h2 className="md:text-xl text-sm text-white mb-3 font-bold">
                 We begin by spending time with the land.
-              </h2>
+              </h2> */}
               <div className="flex-col space-y-2">
                 <p className="md:text-xl text-sm text-white font-extralight">
-                  Understanding the trees and the water that has been here
-                  forever, we see what the community around it needs - and what
-                  it doesn’t.
+                  We begin by spending time with the land. Understanding the
+                  trees and the water that has been here forever, we see what
+                  the community around it needs - and what it doesn’t.
                 </p>
                 <p className="md:text-xl text-sm text-white font-extralight">
-                  From there, everything follows. Homes are placed with the
-                  slope, not against it. Materials are carefully. Foundations
-                  are natural. These are spaces designed to be lived in, slowly,
-                  fully, and over time.
+                  From there, everything follows. The built is carefully placed
+                  with the slope, not against it. The planning is done around
+                  trees and not without them. Materials are locally sourced.
+                  Foundations are kept light. Spaces are conceptualised to
+                  absorb the surrounding beauty and designed to be lived in,
+                  slowly, fully, and over time.
                 </p>
-                
               </div>
             </div>
 
@@ -189,7 +194,7 @@ const OurStory = () => {
         </div>
       </section>
 
-      <section className=" w-screen min-h-screen  relative overflow-hidden flex flex-col items-center justify-center md:gap-10 gap-5">
+      {/* <section className=" w-screen min-h-screen  relative overflow-hidden flex flex-col items-center justify-center md:gap-10 gap-5">
         <img
           src={bgImage2}
           className="absolute h-full md:w-full -z-10 object-cover object-center opacity-15"
@@ -219,14 +224,14 @@ const OurStory = () => {
               </li>
               <li>A community that respects your space, not disrupts it</li>
               <li>
-                Better roads, better Wi-Fi, and most importantly better
-                balance
+                Better roads, better Wi-Fi, and most importantly better balance
               </li>
             </ul>
           </div>
         </div>
-      </section>
+      </section> */}
 
+      {/* Testimonials */}
       <TeamSectionExperiment />
     </main>
   );
