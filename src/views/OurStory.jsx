@@ -55,10 +55,10 @@ const OurStory = () => {
         />
       </section>
 
-      <section className=" w-screen md:min-h-[240vh] relative">
+      <section className="w-screen md:min-h-[100vh] relative">
         <img
           src={bgImage2}
-          className="absolute h-full -z-10 object-cover object-center opacity-15"
+          className="absolute h-full -z-10 w-screen object-cover object-center opacity-15"
         />
 
         <div className=" h-screen w-screen flex items-center flex-col justify-center gap-8">
@@ -232,6 +232,8 @@ const OurStory = () => {
       </section> */}
 
       {/* Testimonials */}
+
+
       <TeamSectionExperiment />
     </main>
   );
