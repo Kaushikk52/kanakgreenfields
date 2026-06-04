@@ -63,10 +63,15 @@ const OurStory = () => {
         />
 
         <div className=" h-screen w-screen flex items-center flex-col justify-center gap-8">
-          <h1 className="md:text-8xl text-4xl text-[#457f5e] ">Our Story</h1>
-          <p className="md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]">
+          <div className="w-screen flex flex-col items-center gap-3">
+          <h1 className="md:text-8xl text-4xl text-[#457f5e]">Our Story</h1>
+          <p className="md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]" 
+          style={{
+                  WebkitTextStroke: "1.2px #457f5e",
+            }}>
             Shaped by the hills, guided by family
           </p>
+          </div>
           <p className="md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]">
             The journey of Kanak Green Fields started long before it became a
             company.
@@ -160,9 +165,14 @@ const OurStory = () => {
               <h1 className="md:text-2xl text-lg text-white mb-3">
                 Our Approach
               </h1>
-              <h2 className="md:text-xl text-sm text-white font-bold">
+              <span
+                className="md:text-xl text-sm text-white mb-3 tracking-normal"
+                style={{
+                  WebkitTextStroke: "0.5px white",
+                }}
+              >
                 Listening to the land before building on it.
-              </h2>
+              </span>
               {/* <h2 className="md:text-xl text-sm text-white mb-3 font-bold">
                 We begin by spending time with the land.
               </h2> */}
@@ -233,7 +243,7 @@ const OurStory = () => {
       </section> */}
 
       {/* Testimonials */}
-        <Testimonials />
+      <Testimonials />
 
       <TeamSectionExperiment />
     </main>

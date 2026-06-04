@@ -77,9 +77,6 @@ export default function Testimonials() {
   return (
     <section className="w-screen relative py-12 overflow-hidden">
       {/* Heading */}
-      <p className="text-center text-xs tracking-widest uppercase text-[#457f5e] mb-2">
-        Testimonials 
-      </p>
       <h1 className="text-center text-3xl md:text-4xl text-[#457f5e] mb-10 font-medium">
         In Their Words
       </h1>
