@@ -63,7 +63,7 @@ const OurStory = () => {
         />
 
         <div className=" h-screen w-screen flex items-center flex-col justify-center gap-8">
-          <div className="w-screen flex flex-col items-center gap-3">
+          <div className="w-screen flex flex-col items-center gap-10">
           <h1 className="md:text-8xl text-4xl text-[#457f5e]">Our Story</h1>
           <p className="md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]" 
           style={{
@@ -119,11 +119,11 @@ const OurStory = () => {
       <section className="w-screen min-h-screen bg-[#457f5e] flex overflow-hidden flex-col items-center md:justify-center py-10 md:py-8">
         <h1 className="md:text-5xl text-3xl text-white">What Build Us!</h1>
 
-        <div className="w-full flex flex-col items-center md:mt-20 mt-7 gap-16 px-6 md:px-16 max-w-6xl mx-auto">
+        <div className="w-full flex flex-col items-center md:mt-20 mt-7 mb-7 gap-16 px-6 md:px-16 max-w-6xl mx-auto">
           {/* Our Belief */}
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20 w-full">
             {/* Text */}
-            <div className="md:w-1/2 w-full flex flex-col tracking-tighter">
+            <div className="md:w-1/2 w-full flex flex-col tracking-tighter self-baseline">
               <h1 className="md:text-2xl text-lg text-white mb-3">
                 Our Belief
               </h1>
@@ -161,7 +161,7 @@ const OurStory = () => {
           {/* Our Approach */}
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20 w-full">
             {/* Text */}
-            <div className="md:w-1/2 w-full flex flex-col tracking-tighter">
+            <div className="md:w-1/2 w-full flex flex-col tracking-tighter self-baseline">
               <h1 className="md:text-2xl text-lg text-white mb-3">
                 Our Approach
               </h1>

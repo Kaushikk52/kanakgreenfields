@@ -79,7 +79,7 @@ const team = [
   },
   {
     name: "Komal Agrawal",
-    role: "Director, Aranyam Greens",
+    role: "People & Culture",
     desc: "Komal Agrawal leads the project with empathy and strategic vision. With a background in Human Resources and passion for clean, nature-connected living, she shapes Aranyam as a legacy of simplicity and balance for future generations.",
     image: member9,
   },

@@ -166,6 +166,20 @@ const LandingPage = () => {
     <main className=" overflow-x-clip">
       {/* hero */}
 
+      <section>
+        <div className="w-full h-[50vh] flex items-center justify-center relative">
+          <h1 className="heading flex text-center">
+            More than a home, its a living,
+            <br /> breathing experience
+          </h1>
+          <img
+            src={blackLogo}
+            alt="Aranyam"
+            className="md:h-4/5  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-2/4 opacity-20"
+          />
+        </div>
+      </section>
+
       <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
         {/* Background Layers */}
         {bgImages.map((img, index) => (
@@ -188,37 +202,72 @@ const LandingPage = () => {
             className=" md:h-[32vh] h-[20vh] z-20"
           />
           <h1 className="heading mb-8 text-center" style={{ color: "white" }}>
-            The Living Experience
+            Built in Conversation with Nature
           </h1>
           <p className=" text-center para md:w-[40%] w-[90%]">
-            Twenty Cottages, Infinite Calm. Aranyam presents 3 & 4 BHK
-            independent cottages with attics, private decks, and personal
-            gardens. No shared walls, no clutter just open skies, fresh air, and
-            pure space.
+            At Aranyam, the land comes first. Foundations remain the same, the
+            surroundings undisturbed, and the terrain guides the process.The
+            result is a community that feels as though it has always belonged
+            there.
           </p>
         </div>
       </section>
 
-      {/* site plan */}
-      {/* <section
-                id="site-plan"
-                className="w-screen  flex md:justify-between flex-col md:flex-row p-15"
-            >
-                <h1 className="heading ">Site plan</h1>
-                <img src={sitePlan} className="md:h-full h-1/2" alt="" />
-            </section> */}
+      <section id="features2" className="w-screen">
+        <div className="w-full bg-white md:py-10 md:px-20">
+          <div className="flex w-full md:h-[50vh]  items-end md:px-20 px-10">
+            <div className=" bg-[#457f5e] md:w-[27vw] md:h-[40vh] w-[50vw] h-[18vh] mr-5">
+              <img
+                className="w-full h-full object-cover"
+                src={leopard}
+                alt=""
+              />
+            </div>
+            <div className=" bg-[#457f5e] md:w-[22vw] md:h-[35vh]  w-[45vw] h-[13vh]">
+              <img className=" w-full h-full object-cover" src={tree} alt="" />
+            </div>
+          </div>
 
-      <section>
-        <div className="w-full h-[50vh] flex items-center justify-center relative">
-          <h1 className="heading flex text-center">
-            More than a home, its a living,
-            <br /> breathing experience
-          </h1>
-          <img
-            src={blackLogo}
-            alt="Aranyam"
-            className="md:h-4/5  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-2/4 opacity-20"
+          <div className="flex md:flex-row flex-col w-full min-h-[50vh]  md:px-25 md:py-6">
+            <div className=" bg-[#457f5e] w-[10vw] h-[10vw] hidden md:block mr-5"></div>
+            <div className=" bg-[#457f5e] md:w-[27vw] md:h-[40vh] w-[70vw] h-[25vh] md:mr-25 mt-5 md:mt-0 mx-15 md:mx-0">
+              <img className="w-full h-full object-cover" src={fruits} alt="" />
+            </div>
+            <div className="  md:w-[35vw] w-[100%] min-h-[40vh]  md:p-10 p-8">
+              <h1 className="heading text-5xl mb-8">
+                Where Nature <br /> Writes Your Story
+              </h1>
+
+              <p className=" para m-3">
+                Aranyam lies deep within evergreen forests of oak, deodar, and
+                blooming Buransh. Orchards brim with kafal, apricots, and
+                litchis, woven into local life. Wildlife roams freely from
+                leopards and black bears to the Himalayan Monal and rare
+                butterflies. Here, nature isn 't a backdrop; it' s the story you
+                live.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* features */}
+      <section id="features" className="w-screen md:min-h-[160vh] ">
+        <div className="w-full md:min-h-[180vh] h-[110vh]  grid grid-cols-2 md:grid-cols-3 gap-0">
+          <div className=" flex-1 border-2 md:p-10 p-3 border-green-700">
+            <h1 className="heading">Experiences</h1>
+          </div>
+          <FeatureBox title="Forest Trails" img={Forest} />
+          <FeatureBox title="Yoga Gardens" img={YogaGarden} />
+          <FeatureBox
+            title="Fruit-Picking Orchards"
+            img={FruitPickingOrchards}
           />
+          <FeatureBox title="Water Trails" img={WaterTrails} />
+          <FeatureBox title="BBQ Deck" img={BBQDeck} />
+          <FeatureBox title="Coffee Bar" img={CoffeeBar} />
+          <FeatureBox title="Mini Theater" img={MiniTheater} />
+          <FeatureBox title="Kids’ Play Area" img={KidsPlayArea} />
         </div>
       </section>
 
@@ -263,26 +312,6 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* features */}
-      <section id="features" className="w-screen md:min-h-[160vh] ">
-        <div className="w-full md:min-h-[180vh] h-[110vh]  grid grid-cols-2 md:grid-cols-3 gap-0">
-          <div className=" flex-1 border-2 md:p-10 p-3 border-green-700">
-            <h1 className="heading">Experiences</h1>
-          </div>
-          <FeatureBox title="Forest Trails" img={Forest} />
-          <FeatureBox title="Yoga Gardens" img={YogaGarden} />
-          <FeatureBox
-            title="Fruit-Picking Orchards"
-            img={FruitPickingOrchards}
-          />
-          <FeatureBox title="Water Trails" img={WaterTrails} />
-          <FeatureBox title="BBQ Deck" img={BBQDeck} />
-          <FeatureBox title="Coffee Bar" img={CoffeeBar} />
-          <FeatureBox title="Mini Theater" img={MiniTheater} />
-          <FeatureBox title="Kids’ Play Area" img={KidsPlayArea} />
-        </div>
-      </section>
-
       {/* features-2 */}
       <section id="features2" className="w-screen">
         <div className="w-full bg-white md:py-40 py-20 flex md:flex-row flex-col">
@@ -290,71 +319,6 @@ const LandingPage = () => {
             Built to <br /> Belong
           </h1>
           <MotionCarousel />
-          {/* <div className="flex overflow-x-auto scrollbar-hide space-x-4 px-4">
-                        <Card
-                            mode="center"
-                            title="Built to Belong"
-                            description="At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land."
-                            bgColor="bg-green-800"
-                        />
-
-                        <Card
-                            mode="top"
-                            image={bgImage}
-                            title="Off-Grid Ready"
-                            description="At Aranyam, sustainability isn't an add-on — it's the foundation. We don't just build homes. We create ecosystems that breathe, regenerate, and live in harmony with the land."
-                        />
-
-                        <Card
-                            mode="bottom"
-                            image={bgImage}
-                            title="Built Light, Built Local"
-                            description="Stone, lime, reclaimed wood — all locally sourced. Built with Kumaoni hands and wisdom."
-                        />
-
-                        <Card
-                            mode="top"
-                            image={bgImage}
-                            title="Built Light, Built Local"
-                            description="Stone, lime, reclaimed wood — all locally sourced. Built with Kumaoni hands and wisdom."
-                        />
-                    </div> */}
-        </div>
-
-        <div className="w-full bg-white md:py-10 md:px-20">
-          <div className="flex w-full md:h-[50vh]  items-end md:px-20 px-10">
-            <div className=" bg-[#457f5e] md:w-[27vw] md:h-[40vh] w-[50vw] h-[18vh] mr-5">
-              <img
-                className="w-full h-full object-cover"
-                src={leopard}
-                alt=""
-              />
-            </div>
-            <div className=" bg-[#457f5e] md:w-[22vw] md:h-[35vh]  w-[45vw] h-[13vh]">
-              <img className=" w-full h-full object-cover" src={tree} alt="" />
-            </div>
-          </div>
-
-          <div className="flex md:flex-row flex-col w-full min-h-[50vh]  md:px-25 md:py-6">
-            <div className=" bg-[#457f5e] w-[10vw] h-[10vw] hidden md:block mr-5"></div>
-            <div className=" bg-[#457f5e] md:w-[27vw] md:h-[40vh] w-[70vw] h-[25vh] md:mr-25 mt-5 md:mt-0 mx-15 md:mx-0">
-              <img className="w-full h-full object-cover" src={fruits} alt="" />
-            </div>
-            <div className="  md:w-[35vw] w-[100%] min-h-[40vh]  md:p-10 p-8">
-              <h1 className="heading text-5xl mb-8">
-                A Landscape That <br /> Breathe With You
-              </h1>
-
-              <p className=" para m-3">
-                Aranyam lies deep in Kumaon’s evergreen forests, where oaks,
-                deodars, and blooming Buransh thrive. Orchards brim with kafal,
-                apricots, and litchis, rooted in local life.Wildlife roams
-                freely from leopards and black bears to the Himalayan Monal and
-                rare butterflies. Here, nature isn’t a backdrop it’s the story
-                you live.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -376,11 +340,8 @@ const LandingPage = () => {
           </h1>
 
           <p className=" md:w-2/3 w-[90%] md:text-lg mt-8 text-center font-stretch-50% tracking-tighter  font-bold text-white">
-            For the founders, Aranyam is personal a tribute to the childhood
-            they were lucky to live, and a gift to those who still believe in
-            magic without screens. This is for the children who deserve trees
-            over tablets. For parents who want silence without sacrifice. For
-            anyone who wants more meaning, and less noise.
+            If you feel drawn to what Aranyam stands for, we 'd be delighted to
+            connect. No urgency. Just a conversation when the time feels right.
           </p>
         </div>
       </section>
