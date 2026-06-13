@@ -62,7 +62,7 @@ const OurStory = () => {
           className="absolute h-full -z-10 w-screen object-cover object-center opacity-15"
         />
 
-        <div className=" h-screen w-screen flex items-center flex-col justify-center gap-8">
+        <div className=" h-screen w-screen flex items-center flex-col justify-center gap-10">
           <div className="w-screen flex flex-col items-center gap-10">
           <h1 className="md:text-8xl text-4xl text-[#457f5e]">Our Story</h1>
           <p className="md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]" 
@@ -72,12 +72,12 @@ const OurStory = () => {
             Shaped by the hills, guided by family
           </p>
           </div>
-          <p className="md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]">
+          <p className="md:text-3xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
             The journey of Kanak Green Fields started long before it became a
             company.
           </p>
 
-          <p className="md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]">
+          <p className="md:text-3xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
             It began with time spent in the hills of Kumaon. What started as the
             life we spent slow afternoons in, walking familiar paths in, and
             revering the mountains of Kumaon became, in a way, a way of life
@@ -85,7 +85,7 @@ const OurStory = () => {
             Kanak, who grew up here, this is an extension of our own home that
             we now want to share with the world.
           </p>
-          <p className="  md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]">
+          <p className="md:text-3xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
             As a family, we came together not to build houses, but to make homes
             in the hills- places where others can come and build life in the
             same quiet rhythm we once knew to be home.
