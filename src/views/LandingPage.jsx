@@ -72,6 +72,9 @@ import { GiShuttlecock } from "react-icons/gi";
 import { IoMdCar } from "react-icons/io";
 import { TbPlayFootball } from "react-icons/tb";
 import { MdPool } from "react-icons/md";
+import bgImage1 from "/bgimages/1.png";
+import bgImage2 from "/bgimages/2.png";
+import spirit from "/bgimages/ChatGPT Image Jun 11, 2026, 01_05_19 PM.png";
 
 const LandingPage = () => {
   const features1 = [
@@ -166,8 +169,15 @@ const LandingPage = () => {
     <main className=" overflow-x-clip">
       {/* hero */}
 
-      <section>
-        <div className="w-full h-[50vh] flex items-center justify-center relative">
+      <section className="relative">
+        <img
+          src={bgImage1}
+          className="absolute inset-0 h-full -z-10 w-screen object-cover object-center opacity-15"
+        />
+        {/* Fade out at the bottom into white */}
+        <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-white z-10" />
+
+        <div className="w-full h-[92vh] flex items-center justify-center relative">
           <h1 className="heading flex text-center">
             More than a home, its a living,
             <br /> breathing experience
@@ -175,7 +185,36 @@ const LandingPage = () => {
           <img
             src={blackLogo}
             alt="Aranyam"
-            className="md:h-4/5  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-2/4 opacity-20"
+            className="md:h-4/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-2/4 opacity-20"
+          />
+        </div>
+      </section>
+
+      {/* Section 2 — merges seamlessly with section 1 fade */}
+      <section className="w-screen bg-white flex flex-col items-center -mt-2">
+        <div className="w-screen flex flex-col gap-10 items-center text-center px-8 md:px-20 pt-4 pb-10 md:pt-6 md:pb-14 max-w-6xl mx-auto">
+          <h1 className="heading text-3xl md:text-4xl mb-5 text-gray-900">
+            Where Home Finds a Natural Meaning
+          </h1>
+          <p className="md:text-2xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+            Aranyam is a thoughtfully imagined mountain community, coming to
+            life in the hills of Kumaon.
+          </p>
+
+          <p className="md:text-2xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+            Created for those who seek a deeper connection with nature, family,
+            and time itself, Aranyam offers a gentler, different way of living.
+            A way where home moves in rhythm with nature and becomes
+            inseparable, almost rooted in its surroundings
+          </p>
+        </div>
+
+        {/* Image with fade-in from top */}
+        <div className="relative w-full h-[60vh] md:h-[80vh]">
+          <img
+            src={bgImage2}
+            alt="Kumaon Hills"
+            className="w-full h-full object-cover object-bottom"
           />
         </div>
       </section>
@@ -214,7 +253,7 @@ const LandingPage = () => {
       </section>
 
       <section id="features2" className="w-screen">
-        <div className="w-full bg-white md:py-10 md:px-20">
+        <div className="w-full bg-white md:py-10 md:px-20 mt-10">
           <div className="flex w-full md:h-[50vh]  items-end md:px-20 px-10">
             <div className=" bg-[#457f5e] md:w-[27vw] md:h-[40vh] w-[50vw] h-[18vh] mr-5">
               <img
@@ -271,6 +310,50 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* "You Do Not Move to Aranyam" editorial section */}
+      <section className="w-screen bg-white flex flex-col items-center py-16 md:py-24 px-6 md:px-16">
+        {/* Heading — left aligned like PDF */}
+        <h1 className="heading md:text-5xl text-3xl text-gray-900 text-left w-full max-w-6xl mx-auto mb-12 md:mb-16 leading-snug">
+          You Do Not Move to Aranyam. You Come Back to It.
+        </h1>
+
+        <div className="w-full max-w-6xl mx-auto flex flex-col gap-16">
+          {/* Image LEFT + Text RIGHT — matching PDF exactly */}
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16 w-full">
+            {/* Left: sketch image */}
+            <div className="w-full md:w-1/2 h-[300px] md:h-[420px]">
+              <img
+                src={spirit}
+                className="w-full h-full object-cover object-center rounded mix-blend-multiply opacity-90"
+                alt="Aranyam architectural sketch"
+              />
+            </div>
+
+            {/* Right: paragraph text, centered like PDF */}
+            <div className="w-full md:w-1/2 flex items-center justify-center">
+              <p className="md:text-xl text-sm text-gray-700 font-light leading-relaxed text-center">
+                There is an older idea of home — one that existed long before
+                addresses and amenities. A place where you are known by the
+                trees as much as by your neighbours. Where the first frost is
+                cause for gathering, and the harvest moon is still something
+                worth stepping outside for.
+              </p>
+            </div>
+          </div>
+
+          {/* Quote — full width, centered, separated by thin line */}
+          <div className="flex flex-col items-center text-center border-t border-gray-200 pt-12">
+            <p className="md:text-2xl text-base italic text-gray-600 font-light leading-relaxed max-w-3xl">
+              "Belonging is not found. It grows — slowly, like the oak, in soil
+              you have chosen to return to."
+            </p>
+            <span className="mt-4 text-sm text-gray-400 tracking-widest">
+              The spirit of Aranyam
+            </span>
+          </div>
+        </div>
+      </section>
+
       {/* sustainable */}
       <section
         id="sustainable"
@@ -321,6 +404,43 @@ const LandingPage = () => {
           <MotionCarousel />
         </div>
       </section>
+
+      {/* "What You See Is Not the Whole Story" section */}
+<section className="w-screen bg-white flex flex-col items-center py-16 md:py-24 px-6 md:px-16">
+
+  {/* Centered heading */}
+  <h1 className="heading md:text-5xl text-3xl text-gray-900 text-center mb-12 md:mb-16 max-w-4xl mx-auto leading-snug">
+    What You See Is Not the Whole Story
+  </h1>
+
+  {/* Text LEFT + Site Plan RIGHT */}
+  <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+
+    {/* Left: two paragraphs, centered text like PDF */}
+    <div className="w-full md:w-1/2 flex flex-col gap-8 text-center">
+      <p className="md:text-xl text-sm text-gray-800 font-light leading-relaxed">
+        Aranyam is not a resort, nor is it built for occasional visits or
+        quick ownership. What you see here is only a glimpse. The essence
+        of Aranyam lies in the spirit of the hills, and the feeling of
+        returning again and again.
+      </p>
+      <p className="md:text-xl text-sm text-gray-800 font-light leading-relaxed">
+        Some places are meant to be viewed. <br />
+        Aranyam is meant to be experienced.
+      </p>
+    </div>
+
+    {/* Right: site plan image */}
+    <div className="w-full md:w-1/2 h-[300px] md:h-[420px]">
+      <img
+        src={sitePlan}
+        alt="Aranyam Site Plan"
+        className="w-full h-full object-contain object-center mix-blend-multiply"
+      />
+    </div>
+
+  </div>
+</section>
 
       {/* nearbyPlaces */}
       <NearbyPlacesSection />

@@ -88,6 +88,8 @@ const team = [
 export default function TeamSectionExperiment() {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef(null);
+  const isHovered = useRef(false); 
+   const intervalRef = useRef(null);
 
   const CARD_WIDTH = 240;
   const GAP = 15; // matches Tailwind gap-6
@@ -95,8 +97,10 @@ export default function TeamSectionExperiment() {
 
   // 1) Infinite autoplay: advance every 5s
   useEffect(() => {
-    const id = setInterval(() => {
-      setActiveIndex((i) => (i + 1) % team.length);
+  const id = setInterval(() => {
+      if (!isHovered.current) {
+        setActiveIndex((i) => (i + 1) % team.length);
+      }
     }, 5000);
     return () => clearInterval(id);
   }, []);
@@ -109,42 +113,48 @@ export default function TeamSectionExperiment() {
   }, [activeIndex]);
 
   // 3) Buttons
-  const prev = () => setActiveIndex((i) => (i - 1 + team.length) % team.length);
-  const next = () => setActiveIndex((i) => (i + 1) % team.length);
+  const prev = () => {
+    setActiveIndex((i) => (i - 1 + team.length) % team.length);
+    startInterval(); // 👈 reset timer
+  };
+  const next = () => {
+    setActiveIndex((i) => (i + 1) % team.length);
+    startInterval(); // 👈 reset timer
+  };
+
+  const handleCardClick = (index) => {
+    setActiveIndex(index);
+    startInterval(); // 👈 reset timer
+  };
 
   return (
-    <section className="bg-white py-12 md:py-20">
-      <h1 className="text-center mb-3 md:text-7xl text-3xl text-[#457f5e] ">Who We Are</h1>
+    <section
+      className="bg-white py-12 md:py-20"
+      onMouseEnter={() => (isHovered.current = true)}
+      onMouseLeave={() => (isHovered.current = false)}
+    >
+      <h1 className="text-center mb-3 md:text-7xl text-3xl text-[#457f5e]">Who We Are</h1>
       <h2 className="text-center md:text-4xl text-2xl text-green-800">
         A family with an intention
       </h2>
       <div className="w-screen md:min-h-screen min-h-[130vh] flex md:flex-row flex-col-reverse items-center justify-center select-none">
+        
         {/* Left: Info */}
         <div className="md:w-1/3 w-[90%] md:p-10 p-2 mt-5">
-          <p className="heading font-bold text-gray-800">
-            {team[activeIndex].name}
-          </p>
+          <p className="heading font-bold text-gray-800">{team[activeIndex].name}</p>
           <p className="text-sm text-gray-500 mb-3">{team[activeIndex].role}</p>
-          <p className="para text-gray-700 italic md:max-w-md">
-            {team[activeIndex].desc}
-          </p>
+          <p className="para text-gray-700 italic md:max-w-md">{team[activeIndex].desc}</p>
         </div>
 
         {/* Right: Carousel */}
         <div className="md:w-2/3 w-full h-[420px] relative">
-          {/* Nav buttons */}
           <button
             onClick={prev}
             aria-label="Previous"
             className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/90 hover:bg-white shadow p-2"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M15 6L9 12L15 18"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
+              <path d="M15 6L9 12L15 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
             </svg>
           </button>
           <button
@@ -153,30 +163,24 @@ export default function TeamSectionExperiment() {
             className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/90 hover:bg-white shadow p-2"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M9 6L15 12L9 18"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
+              <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
             </svg>
           </button>
 
           <div
             ref={containerRef}
             className="flex gap-6 overflow-x-auto items-center h-full px-4
-                     [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-            /* NOTE: avoid 'scroll-smooth' class here—native smooth in JS is enough */
+                       [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           >
             {team.map((member, index) => {
               const isActive = index === activeIndex;
               return (
                 <div
                   key={index}
-                  onClick={() => setActiveIndex(index)}
+                  onClick={() => handleCardClick(index)} // 👈 use handler
                   className={`overflow-hidden flex-shrink-0 bg-gradient-to-b from-[#457f5e] to-[#274735]
-                            transition-transform duration-300 ease-out
-                            ${isActive ? "scale-110 opacity-100" : "scale-100 opacity-60"}`}
+                              transition-transform duration-300 ease-out
+                              ${isActive ? "scale-110 opacity-100" : "scale-100 opacity-60"}`}
                   style={{ width: CARD_WIDTH, height: 380 }}
                 >
                   <img
