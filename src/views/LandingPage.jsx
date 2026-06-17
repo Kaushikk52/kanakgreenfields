@@ -185,7 +185,7 @@ const LandingPage = () => {
           <img
             src={blackLogo}
             alt="Aranyam"
-            className="md:h-4/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-2/4 opacity-20"
+            className="md:h-4/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 opacity-20"
           />
         </div>
       </section>
@@ -277,7 +277,7 @@ const LandingPage = () => {
                 Where Nature <br /> Writes Your Story
               </h1>
 
-              <p className=" para m-3">
+              <p className="md:text-2xl text-md md:w-3/5 w-full text-[#457f5e] tracking-[0.003em] para m-3">
                 Aranyam lies deep within evergreen forests of oak, deodar, and
                 blooming Buransh. Orchards brim with kafal, apricots, and
                 litchis, woven into local life. Wildlife roams freely from
@@ -331,7 +331,7 @@ const LandingPage = () => {
 
             {/* Right: paragraph text, centered like PDF */}
             <div className="w-full md:w-1/2 flex items-center justify-center">
-              <p className="md:text-xl text-sm text-gray-700 font-light leading-relaxed text-center">
+              <p className="md:text-xl text-sm text-[#457f5e] font-light leading-relaxed text-center">
                 There is an older idea of home — one that existed long before
                 addresses and amenities. A place where you are known by the
                 trees as much as by your neighbours. Where the first frost is
@@ -418,13 +418,13 @@ const LandingPage = () => {
 
     {/* Left: two paragraphs, centered text like PDF */}
     <div className="w-full md:w-1/2 flex flex-col gap-8 text-center">
-      <p className="md:text-xl text-sm text-gray-800 font-light leading-relaxed">
+      <p className="md:text-xl text-sm text-[#457f5e] font-light leading-relaxed">
         Aranyam is not a resort, nor is it built for occasional visits or
         quick ownership. What you see here is only a glimpse. The essence
         of Aranyam lies in the spirit of the hills, and the feeling of
         returning again and again.
       </p>
-      <p className="md:text-xl text-sm text-gray-800 font-light leading-relaxed">
+      <p className="md:text-xl text-sm text-[#457f5e] font-light leading-relaxed">
         Some places are meant to be viewed. <br />
         Aranyam is meant to be experienced.
       </p>
