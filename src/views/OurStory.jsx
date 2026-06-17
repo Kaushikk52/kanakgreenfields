@@ -62,26 +62,21 @@ const OurStory = () => {
           className="absolute h-full -z-10 w-screen object-cover object-center opacity-15"
         />
 
-        <div className=" h-screen w-screen flex items-center flex-col justify-center gap-10">
-          <div className="w-screen flex flex-col items-center gap-10">
-          <h1 className="md:text-8xl text-4xl text-[#457f5e]">Our Story</h1>
-          {/* <p className="md:text-2xl text-md md:w-1/2 w-[90%] text-center text-[#457f5e]" 
-          style={{
-                  WebkitTextStroke: "1.2px #457f5e",
-            }}>
+        <div className="min-h-screen w-screen flex items-center flex-col justify-center gap-6 md:gap-8 lg:gap-10 py-16 md:py-20">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl text-[#457f5e]">
+            Our Story
+          </h1>
+
+          <p className="text-lg md:text-xl lg:text-3xl w-[90%] md:w-4/5 lg:w-3/5 text-center text-[#457f5e] tracking-[0.003em] font-medium">
             Shaped by the hills, guided by family
-          </p> */}
-          </div>
-          <p className="md:text-3xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
-             Shaped by the hills, guided by family
           </p>
 
-          <p className="md:text-3xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+          <p className="text-base md:text-xl lg:text-3xl w-[90%] md:w-4/5 lg:w-3/5 text-center text-[#457f5e] tracking-[0.003em]">
             The journey of Kanak Green Fields started long before it became a
             company.
           </p>
 
-          <p className="md:text-3xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+          <p className="text-base md:text-xl lg:text-3xl w-[90%] md:w-4/5 lg:w-3/5 text-center text-[#457f5e] tracking-[0.003em]">
             It began with time spent in the hills of Kumaon. What started as the
             life we spent slow afternoons in, walking familiar paths in, and
             revering the mountains of Kumaon became, in a way, a way of life
@@ -89,37 +84,14 @@ const OurStory = () => {
             Kanak, who grew up here, this is an extension of our own home that
             we now want to share with the world.
           </p>
-          <p className="md:text-3xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+
+          <p className="text-base md:text-xl lg:text-3xl w-[90%] md:w-4/5 lg:w-3/5 text-center text-[#457f5e] tracking-[0.003em]">
             As a family, we came together not to build houses, but to make homes
             in the hills- places where others can come and build life in the
             same quiet rhythm we once knew to be home.
           </p>
         </div>
-
-        {/* <div className=" min-h-screen w-screen flex md:flex-row flex-col-reverse items-center  justify-center ">
-          <div className="left h-full md:w-1/2 w-[90%] flex flex-col md:pl-30 py-10  gap-8">
-            <h1 className=" heading text-left">About KGF</h1>
-
-            <p className="para md:w-1/2 w-[90%] text-[#457f5e]">
-              Kanak Green Fields is a project that aims at building sustainable
-              living that feels like home. Without altering the natural
-              environment, our projects not just promote sustainable living, but
-              also abide by the ethos of local culture, environment and
-              traditions. With projects like Aranyam and others in the pipeline,
-              we aim at making living simpler, but rooting ourselves back to
-              nature and the very place we came from-our roots.
-            </p>
-          </div>
-          <div className="right h-full w-[600px]">
-            <img
-              src={bench}
-              className=" h-full object-cover object-right"
-              alt=""
-            />
-          </div>
-        </div> */}
       </section>
-
       <section className="w-screen min-h-screen bg-[#457f5e] flex overflow-hidden flex-col items-center md:justify-center py-10 md:py-8">
         <h1 className="md:text-5xl text-3xl text-white">What Build Us!</h1>
 

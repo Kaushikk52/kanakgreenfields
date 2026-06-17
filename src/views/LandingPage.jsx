@@ -276,7 +276,7 @@ const LandingPage = () => {
                 Where Nature <br /> Writes Your Story
               </h1>
 
-              <p className="md:text-2xl text-md md:w-3/5 w-full text-[#457f5e] tracking-[0.003em] para m-3">
+              <p className="md:text-2xl text-md md:w-3/5 w-full text-[#457f5e] tracking-[0.03em] para m-3">
                 Aranyam lies deep within evergreen forests of oak, deodar, and
                 blooming Buransh. Orchards brim with kafal, apricots, and
                 litchis, woven into local life. Wildlife roams freely from
