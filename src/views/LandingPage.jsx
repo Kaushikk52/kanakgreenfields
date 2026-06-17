@@ -174,26 +174,25 @@ const LandingPage = () => {
           src={bgImage1}
           className="absolute inset-0 h-full -z-10 w-screen object-cover object-center opacity-15"
         />
-        {/* Fade out at the bottom into white */}
         <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-white z-10" />
 
-        <div className="w-full h-[92vh] flex items-center justify-center relative">
-          <h1 className="heading flex text-center">
-            More than a home, its a living,
-            <br /> breathing experience
-          </h1>
+        <div className="w-full h-[92vh] flex flex-col items-center justify-center gap-6 relative">
           <img
             src={blackLogo}
             alt="Aranyam"
-            className="md:h-4/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-50 opacity-20"
+            className="aspect-video h-50 md:h-72 opacity-20"
           />
+          <h1 className="heading text-center">
+            More than a home, its a living,
+            <br /> breathing experience
+          </h1>
         </div>
       </section>
 
       {/* Section 2 — merges seamlessly with section 1 fade */}
       <section className="w-screen bg-white flex flex-col items-center -mt-2">
         <div className="w-screen flex flex-col gap-10 items-center text-center px-8 md:px-20 pt-4 pb-10 md:pt-6 md:pb-14 max-w-6xl mx-auto">
-          <h1 className="heading text-3xl md:text-4xl mb-5 text-gray-900">
+          <h1 className="heading text-3xl md:text-4xl my-5 text-gray-900">
             Where Home Finds a Natural Meaning
           </h1>
           <p className="md:text-2xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
@@ -406,41 +405,38 @@ const LandingPage = () => {
       </section>
 
       {/* "What You See Is Not the Whole Story" section */}
-<section className="w-screen bg-white flex flex-col items-center py-16 md:py-24 px-6 md:px-16">
+      <section className="w-screen bg-white flex flex-col items-center py-16 md:py-24 px-6 md:px-16">
+        {/* Centered heading */}
+        <h1 className="heading md:text-5xl text-3xl text-gray-900 text-center mb-12 md:mb-16 max-w-4xl mx-auto leading-snug">
+          What You See Is Not the Whole Story
+        </h1>
 
-  {/* Centered heading */}
-  <h1 className="heading md:text-5xl text-3xl text-gray-900 text-center mb-12 md:mb-16 max-w-4xl mx-auto leading-snug">
-    What You See Is Not the Whole Story
-  </h1>
+        {/* Text LEFT + Site Plan RIGHT */}
+        <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+          {/* Left: two paragraphs, centered text like PDF */}
+          <div className="w-full md:w-1/2 flex flex-col gap-8 text-center">
+            <p className="md:text-xl text-sm text-[#457f5e] font-light leading-relaxed">
+              Aranyam is not a resort, nor is it built for occasional visits or
+              quick ownership. What you see here is only a glimpse. The essence
+              of Aranyam lies in the spirit of the hills, and the feeling of
+              returning again and again.
+            </p>
+            <p className="md:text-xl text-sm text-[#457f5e] font-light leading-relaxed">
+              Some places are meant to be viewed. <br />
+              Aranyam is meant to be experienced.
+            </p>
+          </div>
 
-  {/* Text LEFT + Site Plan RIGHT */}
-  <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
-
-    {/* Left: two paragraphs, centered text like PDF */}
-    <div className="w-full md:w-1/2 flex flex-col gap-8 text-center">
-      <p className="md:text-xl text-sm text-[#457f5e] font-light leading-relaxed">
-        Aranyam is not a resort, nor is it built for occasional visits or
-        quick ownership. What you see here is only a glimpse. The essence
-        of Aranyam lies in the spirit of the hills, and the feeling of
-        returning again and again.
-      </p>
-      <p className="md:text-xl text-sm text-[#457f5e] font-light leading-relaxed">
-        Some places are meant to be viewed. <br />
-        Aranyam is meant to be experienced.
-      </p>
-    </div>
-
-    {/* Right: site plan image */}
-    <div className="w-full md:w-1/2 h-[300px] md:h-[420px]">
-      <img
-        src={sitePlan}
-        alt="Aranyam Site Plan"
-        className="w-full h-full object-contain object-center mix-blend-multiply"
-      />
-    </div>
-
-  </div>
-</section>
+          {/* Right: site plan image */}
+          <div className="w-full md:w-1/2 h-[300px] md:h-[420px]">
+            <img
+              src={sitePlan}
+              alt="Aranyam Site Plan"
+              className="w-full h-full object-contain object-center mix-blend-multiply"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* nearbyPlaces */}
       <NearbyPlacesSection />
