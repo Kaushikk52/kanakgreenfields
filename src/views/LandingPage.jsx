@@ -237,12 +237,12 @@ const LandingPage = () => {
             <h1 className="heading text-3xl lg:text-4xl text-gray-900">
               Where Home Finds a Natural Meaning
             </h1>
-            <p className="md:text-lg text-sm lg:w-4/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+            <p className="md:text-lg text-sm lg:w-4/5 w-[100%] text-center text-[#457f5e] tracking-[0.003em]">
               Aranyam is a thoughtfully imagined mountain community, coming to
               life in the hills of Kumaon.
             </p>
 
-            <p className="md:text-lg text-sm lg:w-4/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+            <p className="md:text-lg text-sm lg:w-4/5 w-[100%] text-center text-[#457f5e] tracking-[0.003em]">
               Created for those who seek a deeper connection with nature,
               family, and time itself, Aranyam offers a gentler, different way
               of living. A way where home moves in rhythm with nature and
