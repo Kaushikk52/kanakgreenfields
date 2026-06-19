@@ -223,9 +223,9 @@ const LandingPage = () => {
       </section>
 
       {/* Section 2 — merges seamlessly with section 1 fade */}
-      <section className="w-screen bg-white flex flex-col items-center -mt-2">
-        <div className="w-screen flex flex-col gap-10 items-center text-center px-8 md:px-20 pt-4 pb-10 md:pt-6 md:pb-14 max-w-6xl mx-auto">
-          <h1 className="heading text-3xl md:text-4xl mt-8 text-gray-900">
+      <section className="w-[90%] bg-white flex flex-col items-center -mt-2">
+        <div className="w-screen flex flex-col gap-10 items-center text-center px-8 md:px-20 pt-4 pb-10 md:pt-6 md:pb-14 max-w-6xl mx-auto mt-48">
+          <h1 className="heading text-3xl md:text-4xl text-gray-900">
             Where Home Finds a Natural Meaning
           </h1>
           <p className="md:text-2xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
