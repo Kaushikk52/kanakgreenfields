@@ -189,7 +189,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-            <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
         {/* Background Layers */}
         {bgImages.map((img, index) => (
           <div
@@ -223,69 +223,72 @@ const LandingPage = () => {
       </section>
 
       {/* Section 2 — merges seamlessly with section 1 fade */}
-      <section className="w-screen bg-white flex flex-col items-center -mt-2">
-        <div className="relative top-9/12 w-screen flex flex-col gap-10 items-center text-center px-8 md:px-20 pt-4 pb-10 md:pt-6 md:pb-14 max-w-6xl mx-auto mt-48">
-          <h1 className="heading text-3xl md:text-4xl text-gray-900">
-            Where Home Finds a Natural Meaning
-          </h1>
-          <p className="md:text-2xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
-            Aranyam is a thoughtfully imagined mountain community, coming to
-            life in the hills of Kumaon.
-          </p>
-
-          <p className="md:text-2xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
-            Created for those who seek a deeper connection with nature, family,
-            and time itself, Aranyam offers a gentler, different way of living.
-            A way where home moves in rhythm with nature and becomes
-            inseparable, almost rooted in its surroundings
-          </p>
-        </div>
-
-        {/* Image with fade-in from top */}
-        <div className="relative w-full h-[60vh] md:h-[80vh]">
+      <section className="w-screen bg-white relative -mt-2">
+        {/* Image fills the section */}
+        <div className="relative w-full h-[100vh] md:h-[100vh]">
           <img
             src={bgImage2}
             alt="Kumaon Hills"
             className="w-full h-full object-cover object-bottom"
           />
+
+          {/* Text overlaid into the image's empty top space, with fade for readability */}
+          <div className="absolute top-0 left-0 w-full h-[55%] bg-gradient-to-b from-white via-white/80 to-transparent flex flex-col justify-center gap-4 md:gap-6 items-center text-center px-8 md:px-20 max-w-6xl mx-auto right-0">
+            <h1 className="heading text-3xl lg:text-4xl text-gray-900">
+              Where Home Finds a Natural Meaning
+            </h1>
+            <p className="md:text-xl text-sm lg:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+              Aranyam is a thoughtfully imagined mountain community, coming to
+              life in the hills of Kumaon.
+            </p>
+
+            <p className="md:text-xl text-sm lg:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+              Created for those who seek a deeper connection with nature,
+              family, and time itself, Aranyam offers a gentler, different way
+              of living. A way where home moves in rhythm with nature and
+              becomes inseparable, almost rooted in its surroundings
+            </p>
+          </div>
         </div>
       </section>
 
+      <section id="features2" className="w-screen">
+        <div className="w-full bg-white sm:py-6 md:py-8 lg:py-10 sm:px-6 md:px-10 lg:px-16 xl:px-20 mt-10">
+          <div className="flex w-full sm:h-[35vh] md:h-[38vh] lg:h-[45vh] xl:h-[50vh] items-end sm:px-6 md:px-10 lg:px-16 xl:px-20 px-10">
+            <div className="bg-[#457f5e] sm:w-[32vw] sm:h-[26vh] md:w-[50vw] md:h-[28vh] lg:w-[28vw] lg:h-[36vh] xl:w-[27vw] xl:h-[40vh] w-[50vw] h-[18vh] mr-5">
+              <img
+                className="w-full h-full object-cover"
+                src={leopard}
+                alt=""
+              />
+            </div>
+            <div className="bg-[#457f5e] sm:w-[26vw] sm:h-[22vh] md:w-[45vw] md:h-[23vh] lg:w-[23vw] lg:h-[31vh] xl:w-[22vw] xl:h-[35vh] w-[45vw] h-[13vh]">
+              <img className="w-full h-full object-cover" src={tree} alt="" />
+            </div>
+          </div>
 
+          <div className="flex lg:flex-row flex-col w-full min-h-[50vh] sm:px-6 md:px-10 lg:px-16 xl:px-25 sm:py-6">
+            <div className="bg-[#457f5e] lg:w-[10vw] lg:h-[10vw] hidden lg:block mr-5"></div>
+            <div className="bg-[#457f5e] sm:w-[32vw] sm:h-[26vh] md:w-[70vw] md:h-[40vh] lg:w-[28vw] lg:h-[36vh] xl:w-[27vw] xl:h-[40vh] w-[70vw] h-[25vh] lg:mr-20 xl:mr-25 mt-5 lg:mt-0 mx-15 md:mx-0">
+              <img className="w-full h-full object-cover" src={fruits} alt="" />
+            </div>
+            <div className="md:w-[80vw] lg:w-[45vw] xl:w-[50vw] w-[100%] min-h-[40vh] md:p-8 lg:p-8 xl:p-10 p-8">
+              <h1 className="heading text-4xl sm:text-3xl md:text-5xl lg:text-4xl xl:text-5xl mb-8">
+                Where Nature <br /> Writes Your Story
+              </h1>
 
-<section id="features2" className="w-screen">
-  <div className="w-full bg-white sm:py-6 md:py-8 lg:py-10 sm:px-6 md:px-10 lg:px-16 xl:px-20 mt-10">
-    <div className="flex w-full sm:h-[35vh] md:h-[38vh] lg:h-[45vh] xl:h-[50vh] items-end sm:px-6 md:px-10 lg:px-16 xl:px-20 px-10">
-      <div className="bg-[#457f5e] sm:w-[32vw] sm:h-[26vh] md:w-[50vw] md:h-[28vh] lg:w-[28vw] lg:h-[36vh] xl:w-[27vw] xl:h-[40vh] w-[50vw] h-[18vh] mr-5">
-        <img className="w-full h-full object-cover" src={leopard} alt="" />
-      </div>
-      <div className="bg-[#457f5e] sm:w-[26vw] sm:h-[22vh] md:w-[45vw] md:h-[23vh] lg:w-[23vw] lg:h-[31vh] xl:w-[22vw] xl:h-[35vh] w-[45vw] h-[13vh]">
-        <img className="w-full h-full object-cover" src={tree} alt="" />
-      </div>
-    </div>
-
-    <div className="flex lg:flex-row flex-col w-full min-h-[50vh] sm:px-6 md:px-10 lg:px-16 xl:px-25 sm:py-6">
-      <div className="bg-[#457f5e] lg:w-[10vw] lg:h-[10vw] hidden lg:block mr-5"></div>
-      <div className="bg-[#457f5e] sm:w-[32vw] sm:h-[26vh] md:w-[70vw] md:h-[40vh] lg:w-[28vw] lg:h-[36vh] xl:w-[27vw] xl:h-[40vh] w-[70vw] h-[25vh] lg:mr-20 xl:mr-25 mt-5 lg:mt-0 mx-15 md:mx-0">
-        <img className="w-full h-full object-cover" src={fruits} alt="" />
-      </div>
-      <div className="md:w-[80vw] lg:w-[45vw] xl:w-[50vw] w-[100%] min-h-[40vh] md:p-8 lg:p-8 xl:p-10 p-8">
-        <h1 className="heading text-4xl sm:text-3xl md:text-5xl lg:text-4xl xl:text-5xl mb-8">
-          Where Nature <br /> Writes Your Story
-        </h1>
-
-        <p className="text-md sm:text-sm md:text-xl lg:text-lg xl:text-2xl leading-relaxed md:w-3/4 lg:w-7/8 w-full text-[#457f5e] tracking-[0.03em] m-3">
-          Aranyam lies deep within evergreen forests of oak, deodar, and
-          blooming Buransh. Orchards brim with kafal, apricots, and
-          litchis, woven into local life. Wildlife roams freely from
-          leopards and black bears to the Himalayan Monal and rare
-          butterflies. Here, nature isn't a backdrop; it's the story you
-          live.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+              <p className="text-md sm:text-sm md:text-xl lg:text-lg xl:text-2xl leading-relaxed md:w-3/4 lg:w-7/8 w-full text-[#457f5e] tracking-[0.03em] m-3">
+                Aranyam lies deep within evergreen forests of oak, deodar, and
+                blooming Buransh. Orchards brim with kafal, apricots, and
+                litchis, woven into local life. Wildlife roams freely from
+                leopards and black bears to the Himalayan Monal and rare
+                butterflies. Here, nature isn't a backdrop; it's the story you
+                live.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* features */}
       <section id="features" className="w-screen md:min-h-[160vh] ">
