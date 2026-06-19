@@ -210,7 +210,10 @@ const LandingPage = () => {
             alt="Aranyam"
             className=" md:h-[32vh] h-[20vh] z-20"
           /> */}
-          <h1 className="heading mb-8 text-center [text-shadow:0_2px_8px_rgba(0,0,0,1.80)]" style={{ color: "white" }}>
+          <h1
+            className="heading mb-8 text-center [text-shadow:0_2px_8px_rgba(0,0,0,1.80)]"
+            style={{ color: "white" }}
+          >
             Built in Conversation with Nature
           </h1>
           <p className="text-center para md:w-[40%] w-[90%] text-white [text-shadow:0_2px_8px_rgba(0,0,0,1.80)]">
@@ -254,30 +257,47 @@ const LandingPage = () => {
 
       <section id="features2" className="w-screen">
         <div className="w-full bg-white sm:py-6 md:py-8 lg:py-10 sm:px-6 md:px-10 lg:px-16 xl:px-20 mt-10">
+          {/* Top row: leopard + tree + (text only at lg+) */}
           <div className="flex w-full sm:h-[35vh] md:h-[38vh] lg:h-[45vh] xl:h-[50vh] items-end sm:px-6 md:px-10 lg:px-16 xl:px-20 px-10">
-            <div className="bg-[#457f5e] sm:w-[32vw] sm:h-[26vh] md:w-[50vw] md:h-[28vh] lg:w-[28vw] lg:h-[36vh] xl:w-[27vw] xl:h-[40vh] w-[50vw] h-[18vh] mr-5">
+            <div className="bg-[#457f5e] sm:w-[32vw] sm:h-[26vh] md:w-[50vw] md:h-[28vh] lg:w-[24vw] lg:h-[36vh] xl:w-[22vw] xl:h-[40vh] w-[50vw] h-[18vh] mr-5">
               <img
                 className="w-full h-full object-cover"
                 src={leopard}
                 alt=""
               />
             </div>
-            <div className="bg-[#457f5e] sm:w-[26vw] sm:h-[22vh] md:w-[45vw] md:h-[23vh] lg:w-[23vw] lg:h-[31vh] xl:w-[22vw] xl:h-[35vh] w-[45vw] h-[13vh]">
+            <div className="bg-[#457f5e] sm:w-[26vw] sm:h-[22vh] md:w-[45vw] md:h-[23vh] lg:w-[20vw] lg:h-[31vh] xl:w-[18vw] xl:h-[35vh] w-[45vw] h-[13vh] lg:mr-10">
               <img className="w-full h-full object-cover" src={tree} alt="" />
+            </div>
+
+            <div className="hidden lg:flex lg:flex-col lg:justify-start lg:self-stretch lg:w-[45vw] mt-10 xl:w-[42vw] lg:p-8 xl:p-10">
+              <h1 className="heading text-4xl lg:text-4xl xl:text-5xl mb-8">
+                Where Nature <br /> Writes Your Story
+              </h1>
+              <p className="leading-relaxed lg:text-lg xl:text-2xl lg:w-7/8 text-[#457f5e] tracking-[0.03em] m-3">
+                Aranyam lies deep within evergreen forests of oak, deodar, and
+                blooming Buransh. Orchards brim with kafal, apricots, and
+                litchis, woven into local life. Wildlife roams freely from
+                leopards and black bears to the Himalayan Monal and rare
+                butterflies. Here, nature isn't a backdrop; it's the story you
+                live.
+              </p>
             </div>
           </div>
 
+          {/* Bottom row: spacer + fruits + (text only below lg) */}
           <div className="flex lg:flex-row flex-col w-full min-h-[50vh] sm:px-6 md:px-10 lg:px-16 xl:px-25 sm:py-6">
             <div className="bg-[#457f5e] lg:w-[10vw] lg:h-[10vw] hidden lg:block mr-5"></div>
             <div className="bg-[#457f5e] sm:w-[32vw] sm:h-[26vh] md:w-[70vw] md:h-[40vh] lg:w-[28vw] lg:h-[36vh] xl:w-[27vw] xl:h-[40vh] w-[70vw] h-[25vh] lg:mr-20 xl:mr-25 mt-5 lg:mt-0 mx-15 md:mx-0">
               <img className="w-full h-full object-cover" src={fruits} alt="" />
             </div>
-            <div className="md:w-[80vw] lg:w-[45vw] xl:w-[50vw] w-[100%] min-h-[40vh] md:p-8 lg:p-8 xl:p-10 p-8">
-              <h1 className="heading text-4xl sm:text-3xl md:text-5xl lg:text-4xl xl:text-5xl mb-8">
+
+            {/* Text — visible here only below lg (md and smaller, unchanged) */}
+            <div className="lg:hidden md:w-[80vw] w-[100%] min-h-[40vh] md:p-8 p-8">
+              <h1 className="heading text-4xl sm:text-3xl md:text-5xl mb-8">
                 Where Nature <br /> Writes Your Story
               </h1>
-
-              <p className="text-md sm:text-sm md:text-xl lg:text-lg xl:text-2xl leading-relaxed md:w-3/4 lg:w-7/8 w-full text-[#457f5e] tracking-[0.03em] m-3">
+              <p className="text-md sm:text-sm md:text-xl leading-relaxed md:w-3/4 w-full text-[#457f5e] tracking-[0.03em] m-3">
                 Aranyam lies deep within evergreen forests of oak, deodar, and
                 blooming Buransh. Orchards brim with kafal, apricots, and
                 litchis, woven into local life. Wildlife roams freely from

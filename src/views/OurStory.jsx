@@ -63,7 +63,7 @@ const OurStory = () => {
         />
 
         <div className="min-h-screen w-screen flex items-center flex-col justify-center gap-6 md:gap-8 lg:gap-10 py-16 md:py-20">
-          <h1 className="text-4xl md:text-6xl lg:text-8xl text-[#457f5e]">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl text-[#457f5e]">
             Our Story
           </h1>
 
