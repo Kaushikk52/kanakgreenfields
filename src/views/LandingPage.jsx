@@ -180,7 +180,7 @@ const LandingPage = () => {
           <img
             src={blackLogo}
             alt="Aranyam"
-            className="aspect-video h-50 md:h-72 opacity-20"
+            className="aspect-video h-50 md:h-72"
           />
           <h1 className="heading text-center">
             More than a home, its a living,
@@ -234,11 +234,11 @@ const LandingPage = () => {
           className="flex flex-col items-center w-full h-full justify-center z-20 bg-black/40 px-10 pb-10 "
           style={{ color: "white" }}
         >
-          <img
+          {/* <img
             src={whiteLogo}
             alt="Aranyam"
             className=" md:h-[32vh] h-[20vh] z-20"
-          />
+          /> */}
           <h1 className="heading mb-8 text-center" style={{ color: "white" }}>
             Built in Conversation with Nature
           </h1>
@@ -251,43 +251,39 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="features2" className="w-screen">
-        <div className="w-full bg-white md:py-10 md:px-20 mt-10">
-          <div className="flex w-full md:h-[50vh]  items-end md:px-20 px-10">
-            <div className=" bg-[#457f5e] md:w-[27vw] md:h-[40vh] w-[50vw] h-[18vh] mr-5">
-              <img
-                className="w-full h-full object-cover"
-                src={leopard}
-                alt=""
-              />
-            </div>
-            <div className=" bg-[#457f5e] md:w-[22vw] md:h-[35vh]  w-[45vw] h-[13vh]">
-              <img className=" w-full h-full object-cover" src={tree} alt="" />
-            </div>
-          </div>
+ <section id="features2" className="w-screen">
+  <div className="w-full bg-white md:py-6 lg:py-10 md:px-10 lg:px-20 mt-10">
+    <div className="flex w-full md:h-[40vh] lg:h-[50vh] items-end md:px-10 lg:px-20 px-10">
+      <div className="bg-[#457f5e] md:w-[30vw] md:h-[32vh] lg:w-[27vw] lg:h-[40vh] w-[50vw] h-[18vh] mr-5">
+        <img className="w-full h-full object-cover" src={leopard} alt="" />
+      </div>
+      <div className="bg-[#457f5e] md:w-[25vw] md:h-[28vh] lg:w-[22vw] lg:h-[35vh] w-[45vw] h-[13vh]">
+        <img className="w-full h-full object-cover" src={tree} alt="" />
+      </div>
+    </div>
 
-          <div className="flex md:flex-row flex-col w-full min-h-[50vh]  md:px-25 md:py-6">
-            <div className=" bg-[#457f5e] w-[10vw] h-[10vw] hidden md:block mr-5"></div>
-            <div className=" bg-[#457f5e] md:w-[27vw] md:h-[40vh] w-[70vw] h-[25vh] md:mr-25 mt-5 md:mt-0 mx-15 md:mx-0">
-              <img className="w-full h-full object-cover" src={fruits} alt="" />
-            </div>
-            <div className="  md:w-[35vw] w-[100%] min-h-[40vh]  md:p-10 p-8">
-              <h1 className="heading text-5xl mb-8">
-                Where Nature <br /> Writes Your Story
-              </h1>
+    <div className="flex md:flex-row flex-col w-full min-h-[50vh] md:px-10 lg:px-25 md:py-6">
+      <div className="bg-[#457f5e] w-[10vw] h-[10vw] hidden md:block mr-5"></div>
+      <div className="bg-[#457f5e] md:w-[30vw] md:h-[32vh] lg:w-[27vw] lg:h-[40vh] w-[70vw] h-[25vh] md:mr-10 lg:mr-25 mt-5 md:mt-0 mx-15 md:mx-0">
+        <img className="w-full h-full object-cover" src={fruits} alt="" />
+      </div>
+      <div className="md:w-[40vw] lg:w-[35vw] w-[100%] min-h-[40vh] md:p-6 lg:p-10 p-8">
+        <h1 className="heading text-4xl md:text-4xl lg:text-5xl mb-8">
+          Where Nature <br /> Writes Your Story
+        </h1>
 
-              <p className="md:text-2xl text-md md:w-3/5 w-full text-[#457f5e] tracking-[0.03em] para m-3">
-                Aranyam lies deep within evergreen forests of oak, deodar, and
-                blooming Buransh. Orchards brim with kafal, apricots, and
-                litchis, woven into local life. Wildlife roams freely from
-                leopards and black bears to the Himalayan Monal and rare
-                butterflies. Here, nature isn 't a backdrop; it' s the story you
-                live.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        <p className="md:text-xl lg:text-2xl text-md md:w-4/5 lg:w-5/6 w-full text-[#457f5e] tracking-[0.03em] para m-3">
+          Aranyam lies deep within evergreen forests of oak, deodar, and
+          blooming Buransh. Orchards brim with kafal, apricots, and
+          litchis, woven into local life. Wildlife roams freely from
+          leopards and black bears to the Himalayan Monal and rare
+          butterflies. Here, nature isn't a backdrop; it's the story you
+          live.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* features */}
       <section id="features" className="w-screen md:min-h-[160vh] ">
