@@ -189,36 +189,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Section 2 — merges seamlessly with section 1 fade */}
-      <section className="w-screen bg-white flex flex-col items-center -mt-2">
-        <div className="w-screen flex flex-col gap-10 items-center text-center px-8 md:px-20 pt-4 pb-10 md:pt-6 md:pb-14 max-w-6xl mx-auto">
-          <h1 className="heading text-3xl md:text-4xl my-5 text-gray-900">
-            Where Home Finds a Natural Meaning
-          </h1>
-          <p className="md:text-2xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
-            Aranyam is a thoughtfully imagined mountain community, coming to
-            life in the hills of Kumaon.
-          </p>
-
-          <p className="md:text-2xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
-            Created for those who seek a deeper connection with nature, family,
-            and time itself, Aranyam offers a gentler, different way of living.
-            A way where home moves in rhythm with nature and becomes
-            inseparable, almost rooted in its surroundings
-          </p>
-        </div>
-
-        {/* Image with fade-in from top */}
-        <div className="relative w-full h-[60vh] md:h-[80vh]">
-          <img
-            src={bgImage2}
-            alt="Kumaon Hills"
-            className="w-full h-full object-cover object-bottom"
-          />
-        </div>
-      </section>
-
-      <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
+            <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
         {/* Background Layers */}
         {bgImages.map((img, index) => (
           <div
@@ -250,6 +221,37 @@ const LandingPage = () => {
           </p>
         </div>
       </section>
+
+      {/* Section 2 — merges seamlessly with section 1 fade */}
+      <section className="w-screen bg-white flex flex-col items-center -mt-2">
+        <div className="w-screen flex flex-col gap-10 items-center text-center px-8 md:px-20 pt-4 pb-10 md:pt-6 md:pb-14 max-w-6xl mx-auto">
+          <h1 className="heading text-3xl md:text-4xl mt-8 text-gray-900">
+            Where Home Finds a Natural Meaning
+          </h1>
+          <p className="md:text-2xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+            Aranyam is a thoughtfully imagined mountain community, coming to
+            life in the hills of Kumaon.
+          </p>
+
+          <p className="md:text-2xl text-md md:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+            Created for those who seek a deeper connection with nature, family,
+            and time itself, Aranyam offers a gentler, different way of living.
+            A way where home moves in rhythm with nature and becomes
+            inseparable, almost rooted in its surroundings
+          </p>
+        </div>
+
+        {/* Image with fade-in from top */}
+        <div className="relative w-full h-[60vh] md:h-[80vh]">
+          <img
+            src={bgImage2}
+            alt="Kumaon Hills"
+            className="w-full h-full object-cover object-bottom"
+          />
+        </div>
+      </section>
+
+
 
 <section id="features2" className="w-screen">
   <div className="w-full bg-white sm:py-6 md:py-8 lg:py-10 sm:px-6 md:px-10 lg:px-16 xl:px-20 mt-10">
