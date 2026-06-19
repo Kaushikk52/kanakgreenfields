@@ -63,20 +63,20 @@ const OurStory = () => {
         />
 
         <div className="min-h-screen w-screen flex items-center flex-col justify-center gap-6 md:gap-8 lg:gap-10 py-16 md:py-20">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl text-[#457f5e]">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl text-[#457f5e]">
             Our Story
           </h1>
 
-          <p className="text-lg md:text-xl lg:text-3xl w-[90%] md:w-4/5 lg:w-3/5 text-center text-[#457f5e] tracking-[0.003em] font-medium">
+          <p className="text-lg md:text-xl lg:text-2xl w-[90%] md:w-4/5 lg:w-3/5 text-center text-[#457f5e] tracking-[0.003em] font-medium">
             Shaped by the hills, guided by family
           </p>
 
-          <p className="text-base md:text-xl lg:text-3xl w-[90%] md:w-4/5 lg:w-3/5 text-center text-[#457f5e] tracking-[0.003em]">
+          <p className="text-base md:text-xl lg:text-2xl w-[90%] md:w-4/5 lg:w-3/5 text-center text-[#457f5e] tracking-[0.003em]">
             The journey of Kanak Green Fields started long before it became a
             company.
           </p>
 
-          <p className="text-base md:text-xl lg:text-3xl w-[90%] md:w-4/5 lg:w-3/5 text-center text-[#457f5e] tracking-[0.003em]">
+          <p className="text-base md:text-xl lg:text-2xl w-[90%] md:w-4/5 lg:w-3/5 text-center text-[#457f5e] tracking-[0.003em]">
             It began with time spent in the hills of Kumaon. What started as the
             life we spent slow afternoons in, walking familiar paths in, and
             revering the mountains of Kumaon became, in a way, a way of life
@@ -85,7 +85,7 @@ const OurStory = () => {
             we now want to share with the world.
           </p>
 
-          <p className="text-base md:text-xl lg:text-3xl w-[90%] md:w-4/5 lg:w-3/5 text-center text-[#457f5e] tracking-[0.003em]">
+          <p className="text-base md:text-xl lg:text-2xl w-[90%] md:w-4/5 lg:w-3/5 text-center text-[#457f5e] tracking-[0.003em]">
             As a family, we came together not to build houses, but to make homes
             in the hills- places where others can come and build life in the
             same quiet rhythm we once knew to be home.
