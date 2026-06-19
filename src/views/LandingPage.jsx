@@ -233,7 +233,7 @@ const LandingPage = () => {
           />
 
           {/* Text overlaid into the image's empty top space, with fade for readability */}
-          <div className="absolute top-0 left-0 w-full h-[45%] bg-gradient-to-b from-white via-white/80 to-transparent flex flex-col justify-center gap-2 md:gap-4 items-center text-center px-8 md:px-20 max-w-8xl mx-auto right-0">
+          <div className="absolute top-0 left-0 w-full h-[45%] bg-gradient-to-b from-white via-white/80 to-transparent flex flex-col justify-center gap-2 md:gap-4 items-center text-center px-8 md:px-10 max-w-8xl mx-auto right-0">
             <h1 className="heading text-3xl lg:text-4xl text-gray-900">
               Where Home Finds a Natural Meaning
             </h1>
