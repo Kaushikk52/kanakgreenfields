@@ -233,16 +233,16 @@ const LandingPage = () => {
           />
 
           {/* Text overlaid into the image's empty top space, with fade for readability */}
-          <div className="absolute top-0 left-0 w-full h-[55%] bg-gradient-to-b from-white via-white/80 to-transparent flex flex-col justify-center gap-4 md:gap-6 items-center text-center px-8 md:px-20 max-w-6xl mx-auto right-0">
+          <div className="absolute top-0 left-0 w-full h-[45%] bg-gradient-to-b from-white via-white/80 to-transparent flex flex-col justify-center gap-2 md:gap-4 items-center text-center px-8 md:px-20 max-w-8xl mx-auto right-0">
             <h1 className="heading text-3xl lg:text-4xl text-gray-900">
               Where Home Finds a Natural Meaning
             </h1>
-            <p className="md:text-xl text-sm lg:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+            <p className="md:text-lg text-sm lg:w-4/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
               Aranyam is a thoughtfully imagined mountain community, coming to
               life in the hills of Kumaon.
             </p>
 
-            <p className="md:text-xl text-sm lg:w-3/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
+            <p className="md:text-lg text-sm lg:w-4/5 w-[90%] text-center text-[#457f5e] tracking-[0.003em]">
               Created for those who seek a deeper connection with nature,
               family, and time itself, Aranyam offers a gentler, different way
               of living. A way where home moves in rhythm with nature and
