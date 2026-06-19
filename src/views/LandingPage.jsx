@@ -195,27 +195,27 @@ const LandingPage = () => {
           <div
             key={index}
             className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
-              index === current ? "opacity-70 z-10" : "opacity-0 z-0"
+              index === current ? "opacity-80 z-10" : "opacity-0 z-0"
             }`}
             style={{ backgroundImage: `url(${img})` }}
           ></div>
         ))}
 
-        <div
-          className="flex flex-col items-center w-full h-full justify-center z-20 bg-black/40 px-10 pb-10 "
-          style={{ color: "white" }}
-        >
+        {/* Subtle gradient scrim for contrast — not a solid highlight box */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60 z-10"></div>
+
+        <div className="flex flex-col items-center w-full h-full justify-center z-20 px-10 pb-10">
           {/* <img
             src={whiteLogo}
             alt="Aranyam"
             className=" md:h-[32vh] h-[20vh] z-20"
           /> */}
-          <h1 className="heading mb-8 text-center" style={{ color: "white" }}>
+          <h1 className="heading mb-8 text-center [text-shadow:0_2px_8px_rgba(0,0,0,1.80)]" style={{ color: "white" }}>
             Built in Conversation with Nature
           </h1>
-          <p className=" text-center para md:w-[40%] w-[90%]">
+          <p className="text-center para md:w-[40%] w-[90%] text-white [text-shadow:0_2px_8px_rgba(0,0,0,1.80)]">
             At Aranyam, the land comes first. Foundations remain the same, the
-            surroundings undisturbed, and the terrain guides the process.The
+            surroundings undisturbed, and the terrain guides the process. The
             result is a community that feels as though it has always belonged
             there.
           </p>
