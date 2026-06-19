@@ -195,7 +195,7 @@ const LandingPage = () => {
           <div
             key={index}
             className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
-              index === current ? "opacity-100 z-10" : "opacity-0 z-0"
+              index === current ? "opacity-70 z-10" : "opacity-0 z-0"
             }`}
             style={{ backgroundImage: `url(${img})` }}
           ></div>
@@ -224,7 +224,7 @@ const LandingPage = () => {
 
       {/* Section 2 — merges seamlessly with section 1 fade */}
       <section className="w-screen bg-white flex flex-col items-center -mt-2">
-        <div className="w-screen flex flex-col gap-10 items-center text-center px-8 md:px-20 pt-4 pb-10 md:pt-6 md:pb-14 max-w-6xl mx-auto mt-48">
+        <div className="relative top-9/12 w-screen flex flex-col gap-10 items-center text-center px-8 md:px-20 pt-4 pb-10 md:pt-6 md:pb-14 max-w-6xl mx-auto mt-48">
           <h1 className="heading text-3xl md:text-4xl text-gray-900">
             Where Home Finds a Natural Meaning
           </h1>
