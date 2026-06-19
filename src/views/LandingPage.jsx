@@ -251,28 +251,28 @@ const LandingPage = () => {
         </div>
       </section>
 
- <section id="features2" className="w-screen">
-  <div className="w-full bg-white md:py-6 lg:py-10 md:px-10 lg:px-20 mt-10">
-    <div className="flex w-full md:h-[40vh] lg:h-[50vh] items-end md:px-10 lg:px-20 px-10">
-      <div className="bg-[#457f5e] md:w-[30vw] md:h-[32vh] lg:w-[27vw] lg:h-[40vh] w-[50vw] h-[18vh] mr-5">
+<section id="features2" className="w-screen">
+  <div className="w-full bg-white sm:py-6 md:py-8 lg:py-10 sm:px-6 md:px-10 lg:px-16 xl:px-20 mt-10">
+    <div className="flex w-full sm:h-[35vh] md:h-[38vh] lg:h-[45vh] xl:h-[50vh] items-end sm:px-6 md:px-10 lg:px-16 xl:px-20 px-10">
+      <div className="bg-[#457f5e] sm:w-[32vw] sm:h-[26vh] md:w-[50vw] md:h-[28vh] lg:w-[28vw] lg:h-[36vh] xl:w-[27vw] xl:h-[40vh] w-[50vw] h-[18vh] mr-5">
         <img className="w-full h-full object-cover" src={leopard} alt="" />
       </div>
-      <div className="bg-[#457f5e] md:w-[25vw] md:h-[28vh] lg:w-[22vw] lg:h-[35vh] w-[45vw] h-[13vh]">
+      <div className="bg-[#457f5e] sm:w-[26vw] sm:h-[22vh] md:w-[45vw] md:h-[23vh] lg:w-[23vw] lg:h-[31vh] xl:w-[22vw] xl:h-[35vh] w-[45vw] h-[13vh]">
         <img className="w-full h-full object-cover" src={tree} alt="" />
       </div>
     </div>
 
-    <div className="flex md:flex-row flex-col w-full min-h-[50vh] md:px-10 lg:px-25 md:py-6">
-      <div className="bg-[#457f5e] w-[10vw] h-[10vw] hidden md:block mr-5"></div>
-      <div className="bg-[#457f5e] md:w-[30vw] md:h-[32vh] lg:w-[27vw] lg:h-[40vh] w-[70vw] h-[25vh] md:mr-10 lg:mr-25 mt-5 md:mt-0 mx-15 md:mx-0">
+    <div className="flex lg:flex-row flex-col w-full min-h-[50vh] sm:px-6 md:px-10 lg:px-16 xl:px-25 sm:py-6">
+      <div className="bg-[#457f5e] lg:w-[10vw] lg:h-[10vw] hidden lg:block mr-5"></div>
+      <div className="bg-[#457f5e] sm:w-[32vw] sm:h-[26vh] md:w-[70vw] md:h-[40vh] lg:w-[28vw] lg:h-[36vh] xl:w-[27vw] xl:h-[40vh] w-[70vw] h-[25vh] lg:mr-20 xl:mr-25 mt-5 lg:mt-0 mx-15 md:mx-0">
         <img className="w-full h-full object-cover" src={fruits} alt="" />
       </div>
-      <div className="md:w-[40vw] lg:w-[35vw] w-[100%] min-h-[40vh] md:p-6 lg:p-10 p-8">
-        <h1 className="heading text-4xl md:text-4xl lg:text-5xl mb-8">
+      <div className="md:w-[80vw] lg:w-[45vw] xl:w-[50vw] w-[100%] min-h-[40vh] md:p-8 lg:p-8 xl:p-10 p-8">
+        <h1 className="heading text-4xl sm:text-3xl md:text-5xl lg:text-4xl xl:text-5xl mb-8">
           Where Nature <br /> Writes Your Story
         </h1>
 
-        <p className="md:text-xl lg:text-2xl text-md md:w-4/5 lg:w-5/6 w-full text-[#457f5e] tracking-[0.03em] para m-3">
+        <p className="text-md sm:text-sm md:text-xl lg:text-lg xl:text-2xl leading-relaxed md:w-3/4 lg:w-7/8 w-full text-[#457f5e] tracking-[0.03em] m-3">
           Aranyam lies deep within evergreen forests of oak, deodar, and
           blooming Buransh. Orchards brim with kafal, apricots, and
           litchis, woven into local life. Wildlife roams freely from
